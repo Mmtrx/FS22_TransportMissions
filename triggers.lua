@@ -29,10 +29,16 @@ function Trans:initialize()
 	-- fix AbstractMission: 
 		Utility.overwrittenFunction(AbstractMission, "new", abstractMissionNew)
 	-- to allow multiple missions:
-	MissionManager.hasFarmReachedMissionLimit =
+		MissionManager.hasFarmReachedMissionLimit =
 		Utils.overwrittenFunction(nil, function() return false end)
 	end
-	self.dePref = {
+	self.maps = { 				 -- max transport missions
+		MapUS = {dir = "mapUS/", num = 6},
+		MapFR = {dir = "mapFR/", num = 8},
+		mapAlpine = {dir = "mapAlpine/", num = 4}	
+	}
+	-- Todo: adjust for other 2 maps
+	self.dePref = { 		-- German prepositions for US map triggers
 		TRANS01 = " der", 	-- Mühle
 		TRANS05 = " der", 	-- Weberei
 		TRANS08 = " der", 	-- Tankstelle
@@ -46,7 +52,7 @@ function Trans:initialize()
 	self.usedTriggers = {} 	-- keep index names of not yet created triggers 
 	self.numTriggers = 0  	-- # of loaded placeables with transport triggers
 	self.seenTriggers = 0 	-- # of already loaded placeables on client, after join game
-	self.LOADED_MY_PLACEABLES = 1001
+	self.LOADED_MY_PLACEABLES = 1001 	-- my own message id
 
 	-- to save our self.placsLoaded switch: 
 	Utility.appendedFunction(PlaceableSystem, "saveToXML", placSaveXML)
@@ -74,19 +80,28 @@ end
 function Trans:onPostLoadMap(mapNode, mapFile)
 	-- check for correct map
 	local map = g_currentMission.missionInfo.map
-	debugPrint("[%s] map.mapId, isMod: %s, %s", self.name, map.id, map.isModMap)
-	if map.id ~= "MapUS" or map.isModMap then 
-		Logging.error("[%s] only works for standard Elmcreek map", self.name)
+	local mapDir = self.maps[map.id] and self.maps[map.id].dir
+	debugPrint("[%s] mapId: %s, mapDir: %s, isMod: %s", self.name, map.id, mapDir, map.isModMap)
+	if not mapDir or map.isModMap then 
+		Logging.error("[%s] does not work for mod maps. Mod will shut down.", self.name)
 		g_gui:showInfoDialog({
-			text = string.format("%s does not work with this map. Please start a game with the standard Elmcreek map.", self.name)
+			text = string.format("%s does not work with this mod map. Please start a game with one of the standard maps.", self.name)
 		})
+		g_messageCenter:unsubscribeAll(self)
+		removeModEventListener(self.super)
+		return
+	end
+	self.mapDir = self.directory .. mapDir
+	-- as long as MapFR, mapAlpine not ready:
+	if mapDir ~= "mapUS/" then
+		Logging.error("[%s] %s not yet supported", self.name, map.id)
 		g_messageCenter:unsubscribeAll(self)
 		removeModEventListener(self.super)
 		return
 	end
 	-- adjust max missions
 	if g_server then
-		MissionManager.MAX_TRANSPORT_MISSIONS = 6 -- value for Elmcreek
+		MissionManager.MAX_TRANSPORT_MISSIONS = self.maps[map.id].num 
 		MissionManager.MAX_MISSIONS = MissionManager.MAX_MISSIONS + MissionManager.MAX_TRANSPORT_MISSIONS -- add max transport missions to max missions
 		MissionManager.MAX_MISSIONS_PER_GENERATION = math.min(MissionManager.MAX_MISSIONS / 5, 30) -- max missions per generation = max mission / 5 but not more then 30
 		MissionManager.MAX_TRIES_PER_GENERATION = math.ceil(MissionManager.MAX_MISSIONS_PER_GENERATION * 1.5) -- max tries per generation 50% more then max missions per generation
@@ -95,9 +110,6 @@ function Trans:onPostLoadMap(mapNode, mapFile)
 	debugPrint("[%s] MAX_TRANSPORT_MISSIONS set to %s", self.name, MissionManager.MAX_TRANSPORT_MISSIONS)
 	debugPrint("[%s] MAX_MISSIONS_PER_GENERATION set to %s", self.name, MissionManager.MAX_MISSIONS_PER_GENERATION)
 	debugPrint("[%s] MAX_TRIES_PER_GENERATION set to %s", self.name, MissionManager.MAX_TRIES_PER_GENERATION)
-
-	-- initialize constants depending on game manager instances
-	--self.ft = g_fillTypeManager.fillTypes
 end
 function Trans:onWriteStream(streamId)
 	-- write to a client when it joins
@@ -121,7 +133,6 @@ function Trans:onReadStream(streamId)
 end
 function Trans:load()
 	local g = g_currentMission
-	local triggerDir = self.directory.."triggers/"
     if g:getIsServer() then
 		if g.missionInfo.placeablesXML then 
 			local xml = loadXMLFile("plac", g.missionInfo.placeablesXML)
@@ -132,14 +143,14 @@ function Trans:load()
 		end	
 		-- load our placeables if not already in savegame, and insert triggers
 		if not self.placsLoaded then 
-			self:loadPlaceables(Utils.getFilename("placeables.xml",triggerDir)) -- also calls loadTriggers()
+			self:loadPlaceables(Utils.getFilename("placeables.xml",self.mapDir)) -- also calls loadTriggers()
 			self.placsLoaded = true
 		else 
 			self:loadTriggers()
 		end
 	end
 	-- load our transport mission definitions (on server and on client)
-	g_missionManager:loadTransportMissions(Utils.getFilename("transportMissions.xml",triggerDir))
+	g_missionManager:loadTransportMissions(Utils.getFilename("transportMissions.xml", self.mapDir))
 end
 function Trans:loadPlaceables(filename) 
 	-- load our transp trigger placeables

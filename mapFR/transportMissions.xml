@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<transportMissions>
+	<!--- definitions for Haut Beyleron map must go here - - - - - - - - - - - - - - - - - -->
+	<mission name="BAKERY" rewardScale="1.0" npcName="NPC_US_01" description="$l10n_tc_bakery">
+		<pickupTrigger index="TRANS10" title="$l10n_bakery" /> 
+		<dropoffTrigger index="TRANS01" title="$l10n_grainmill" />
+		<dropoffTrigger index="TRANS02" title="$l10n_farmers" />
+		<dropoffTrigger index="TRANS03" title="$l10n_sawmill" />
+		<dropoffTrigger index="TRANS04" title="$l10n_cattle" />
+		<dropoffTrigger index="TRANS05" title="$l10n_spinnery" />
+		<dropoffTrigger index="TRANS06" title="$l10n_bowling" /> 
+		<dropoffTrigger index="TRANS07" title="$l10n_mall" /> 
+		<dropoffTrigger index="TRANS08" title="$l10n_gasstation" /> 
+		<dropoffTrigger index="TRANS09" title="$l10n_bga" /> 
+		<dropoffTrigger index="TRANS10" title="$l10n_bakery" /> 
+		<dropoffTrigger index="TRANS11" title="$l10n_oilplant" />
+		<dropoffTrigger index="TRANS12" title="$l10n_siloeast" /> 
+		<dropoffTrigger index="TRANS13" title="$l10n_carpenter" /> 
+		<dropoffTrigger index="TRANS14" title="$l10n_feedsouth" /> 
+		<dropoffTrigger index="TRANS15" title="$l10n_dairy" /> 
+		<dropoffTrigger index="TRANS16" title="$l10n_silowest" /> 
+		<dropoffTrigger index="TRANS17" title="$l10n_heating" /> 
+
+		<object filename="$data/objects/pallets/bakeryBoxPallet/bakeryBoxPallet.xml" min="4" max="6" size="1.2 1 0.8" offset="0.8 0 5.5" title="$l10n_tc_bread" />
+		<object filename="$data/objects/pallets/cakePallet/cakePallet.xml" min="4" max="6" size="1.2 1 0.8" offset="0.8 0 5.5" title="$l10n_tc_cake" />
+	</mission>
+
+</transportMissions>
