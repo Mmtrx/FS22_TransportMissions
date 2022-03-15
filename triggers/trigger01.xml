@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<placeable type="simplePlaceable" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../../shared/xml/schema/placeable.xsd">
+    <storeData>
+        <name>"Transport Trigger"</name>
+        <!--image>Store.dds</image-->
+        <price>10000000</price>
+        <functions>
+            <function>"Inserts trigger for transport mission"</function>
+        </functions>
+        <dailyUpkeep>0</dailyUpkeep>
+        <showInStore>false</showInStore>
+        <lifetime>1000</lifetime>
+        <rotation>0</rotation>
+        <brand>NONE</brand>
+        <species>placeable</species>
+        <category>placeableMisc</category>
+        <brush>
+            <type>placeable</type>
+            <category>buildings</category>
+            <tab>tools</tab>
+        </brush>
+        <instanceVertexBufferMemoryUsage>0</instanceVertexBufferMemoryUsage>
+		<instanceIndexBufferMemoryUsage>0</instanceIndexBufferMemoryUsage>
+		<audioMemoryUsage>0</audioMemoryUsage>
+        <vertexBufferMemoryUsage>186880</vertexBufferMemoryUsage>
+        <indexBufferMemoryUsage>32000</indexBufferMemoryUsage>
+        <textureMemoryUsage>2424832</textureMemoryUsage>
+    </storeData>
+    <base>
+        <filename>triggers/transport19.i3d</filename>
+    </base>
+    <placement useRandomYRotation="false" useManualYRotation="true" >
+        <testAreas/>
+		<sounds>
+            <place template="smallImp"/>
+        </sounds>
+    </placement>
+    <clearAreas/>
+    <leveling/>
+    <indoorAreas/>
+    <tipOcclusionUpdateAreas/>
+    <ai>
+        <updateAreas/>
+    </ai>
+    <hotspots/>
+    <i3dMappings>
+        <i3dMapping id="trigger" node="0>1" />
+    </i3dMappings>
+</placeable>

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<l10n>
+	<texts>
+		<!-- Mission descriptions -->
+		<text name="tc_bakery" text="Fahre ein paar Backwaren für die Bäckerei aus. Liefere die Paletten bei%s %s ab." />
+		<text name="tc_flourmission" text="Auftrag von der Mühle: Hole ein paar Paletten ab und liefere sie bei%s %s aus." />
+		<text name="tc_fmarketproduce" text="Fahre für den Farmer-Markt ein paar Lebensmittel zum Kunden. Liefere die Paletten bei%s %s ab." />
+		<text name="tc_fmarketseed" text="Hole ein paar Paletten Saatgut / Futtermittel vom Farmer-Markt ab und liefere sie bei%s %s ab." />
+		<text name="tc_sawmill" text="Hole ein paar Paletten Bretter/ Möbel vom Sägewerk und liefere sie bei%s %s ab." />
+		<text name="tc_cattle" text="Der Viehhändler hat einen Auftrag: Hole die Paletten von seinem Hof und liefere sie bei%s %s ab." />
+		<text name="tc_spinnery" text="Auftrag von der Weberei: Lade die Paletten mit Stoffen / Kleidung hier auf und liefere sie bei%s %s ab." />
+		<text name="tc_mall" text="Das Einkaufszentrum hat angerufen: Lade ein paar Güter auf und liefere die Paletten bei%s %s ab." />
+		<text name="tc_gasbread" text="Anruf von der Tankstelle: Zu%s %s sollen ein paar Paletten geliefert werden. Sie stehen bei der Tankstelle bereit." />
+		<text name="tc_container" text="Lade ein paar leere Behälter hier auf und liefere sie bei%s %s ab." />
+		<text name="tc_bga" text="Ein neuer Auftrag von der BGA: Lade ein paar Paletten dort auf und liefere sie bei%s %s ab." />
+		<text name="tc_oilplant" text="Die Ölmühle hat folgenden Auftrag: Produkte dort abholen und bei%s %s abliefern." />
+		<text name="tc_rail" text="Auftrag von Elmcreek Rail: Lade ein paar Paletten am Bahnsilo auf und liefere sie bei%s %s ab." />
+		<text name="tc_carpenter" text="Der Tischler möchte ein paar Paletten vom Hof haben, liefere sie bei%s %s ab." />
+		<text name="tc_feed" text="Auftrag von Futtermittel Süd: Lade die Paletten bei ihnen auf und liefere sie bei%s %s ab." />
+		<text name="tc_dairy" text="Die Meierei hat angerufen: Liefere ein paar Produkte von ihnen bei%s %s ab." />
+
+		<!-- Transport Trigger -->
+		<text name="grainmill" 	text="Getreidemühle" />
+		<text name="farmers"  	text="Farmers Market" />
+		<text name="sawmill"  	text="Sägewerk" />
+		<text name="cattle"  	text="Viehhändler" />
+		<text name="spinnery"  	text="Weberei" />
+		<text name="bowling"  	text="Bowling Restaurant" />
+		<text name="mall"  		text="Einkaufszentrum" />
+		<text name="gasstation" text="Tankstelle" />
+		<text name="bga"  		text="BGA" />
+		<text name="bakery"  	text="Bäckerei" />
+		<text name="oilplant" 	text="Ölmühle" />
+		<text name="siloeast"  	text="Bahnsilo Ost" />
+		<text name="carpenter" 	text="Schreiner" />
+		<text name="feedsouth" 	text="Futtermittel Süd" />
+		<text name="dairy" 		text="Meierei" />
+		<text name="silowest"  	text="Bahnsilo West" />
+		<text name="heating" 	text="Bioheizkraftwerk" />
+
+		<!-- Object descriptions -->
+		<text name="tc_boards" 	text="Bretter" />
+		<text name="tc_bread" 	text="Brote" />
+		<text name="tc_butter" 	text="Butter" />
+		<text name="tc_cake" 	text="Torten" />
+		<text name="tc_canola" 	text="Rapsöl" />
+		<text name="tc_cereals" text="Getreideflocken" />
+		<text name="tc_cheese" 	text="Käse" />
+		<text name="tc_choco" 	text="Schokolade" />
+		<text name="tc_clothes" text="Kleidung" />
+		<text name="tc_eggs" 	text="Eier" />
+		<text name="tc_euro" 	text="Leerpaletten" />
+		<text name="tc_fabrics" text="Stoffe" />
+		<text name="tc_fillable" text="Behälter" />
+		<text name="tc_flour" 	text="Mehl" />
+		<text name="tc_furniture" text="Möbel" />
+		<text name="tc_grape" 	text="Behälter" />
+		<text name="tc_honey" 	text="Honig" />
+		<text name="tc_juice" 	text="Saft" />
+		<text name="tc_lettuce" text="Salat" />
+		<text name="tc_liquid" 	text="Tankbehälter" />
+		<text name="tc_oil" 	text="Sonnenblumenöl" />
+		<text name="tc_pioneer" text="Saatgut" />
+		<text name="tc_schaumann" text="Futtermittel" />
+		<text name="tc_strawberries" text="Erdbeeren" />
+		<text name="tc_sugar" 	text="Zucker" />
+		<text name="tc_tomatoes" text="Tomaten" />
+		<text name="tc_wool" 	text="Wolle" />
+	</texts>
+</l10n>

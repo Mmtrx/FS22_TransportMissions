@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<modDesc descVersion="63">
+	<author>Mmtrx</author>
+	<version>1.0.0.0</version>
+	<title>
+		<en>Transport Missions: Elmcreek</en>
+		<de>Transportaufträge: Elmcreek</de>
+	</title>
+	<description>
+		<en>
+			<![CDATA[
+If you missed the simple transport missions from earlier game versions, you should try this mod. It generates transport missions that can be chosen in the "Contracts" menu, in addition to the fieldwork jobs.
+
+Only for the standard Elmcreek map yet. ]]>
+		</en>
+		<de>
+			<![CDATA[
+Falls Sie die einfachen Transportaufträge aus früheren Spielversionen vermisst haben, sollten Sie diesen Mod 
+ausprobieren. Er generiert Transportaufträge, die zusätzlich zu den Feldbearbeitungs-Aufträgen im Spielmenü "Verträge" ausgewählt werden können.
+
+Zunächst allerdings nur auf der Standard Elmcreek Karte. ]]>
+		</de>
+	</description>
+	<iconFilename>modIcon.dds</iconFilename>
+	<multiplayer supported="true" />
+	<storeItems>
+		<storeItem xmlFilename="triggers/trigger01.xml"/>
+	</storeItems> 
+	<extraSourceFiles>
+		<sourceFile filename="lib/utility/Main.lua" />
+		<sourceFile filename="lib/rmod/Main.lua" />
+		<sourceFile filename="triggers.lua" />
+	</extraSourceFiles>
+	<l10n filenamePrefix="l10n/l10n" />
+</modDesc>

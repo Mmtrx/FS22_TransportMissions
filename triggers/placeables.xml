@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<placeables version="1">
+    <!-- 01 grainmill -->
+    <placeable modName="FS22_TransportMissions" filename="$moddir$FS22_TransportMissions/triggers/trigger01.xml" id="48" position="-116.16468048096 95.054840087891 -928.98657226563" rotation="0 0 0" age="0.000000" price="10.000000" farmId="15"/>
+    <!-- 02 Farmers Market -->
+    <placeable modName="FS22_TransportMissions" filename="$moddir$FS22_TransportMissions/triggers/trigger01.xml" id="49" position="-885.80004882813 91.996147155762 -636.01989746094" rotation="0 0 0" age="0.000000" price="10.000000" farmId="15"/>
+    <!-- 03 sawmill -->
+    <placeable modName="FS22_TransportMissions" filename="$moddir$FS22_TransportMissions/triggers/trigger01.xml" id="50" position="-840.41522216797 100.00000762939 -436.50305175781" rotation="0 0 0" age="0.000000" price="10.000000" farmId="15"/>
+    <!-- 04 cattle dealer -->
+    <placeable modName="FS22_TransportMissions" filename="$moddir$FS22_TransportMissions/triggers/trigger01.xml" id="51" position="-655.57647705078 82 -329.20074462891" rotation="0 0 0" age="0.000000" price="10.000000" farmId="15"/>
+    <!-- 05 spinnery -->
+    <placeable modName="FS22_TransportMissions" filename="$moddir$FS22_TransportMissions/triggers/trigger01.xml" id="52" position="69.652053833008 97.371513366699 -396.888671875" rotation="0 0 0" age="0.000000" price="10.000000" farmId="15"/>
+    <!-- 06 bowling restaurant -->
+    <placeable modName="FS22_TransportMissions" filename="$moddir$FS22_TransportMissions/triggers/trigger01.xml" id="53" position="824.85314941406 103 -590.38403320313" rotation="0 16.129360243844 0" age="0.000000" price="10.000000" farmId="15"/>
+    <!-- 07 shopping mall -->
+    <placeable modName="FS22_TransportMissions" filename="$moddir$FS22_TransportMissions/triggers/trigger01.xml" id="54" position="26.638313293457 86 -6.7641592025757" rotation="0 45.249689062633 0" age="0.000000" price="10.000000" farmId="15"/>
+    <!-- 08 fast food -->
+    <placeable modName="FS22_TransportMissions" filename="$moddir$FS22_TransportMissions/triggers/trigger01.xml" id="55" position="264.5246887207 88 52.385082244873" rotation="0 0 0" age="0.000000" price="10.000000" farmId="15"/>
+    <!-- 09 BGA -->
+    <placeable modName="FS22_TransportMissions" filename="$moddir$FS22_TransportMissions/triggers/trigger01.xml" id="56" position="1020 85.373550415039 -100" rotation="0 0 0" age="0.000000" price="10.000000" farmId="15"/>
+    <!-- 10 bakery -->
+    <placeable modName="FS22_TransportMissions" filename="$moddir$FS22_TransportMissions/triggers/trigger01.xml" id="57" position="639.24761962891 85.622573852539 102.2" rotation="0 0 0" age="0.000000" price="10.000000" farmId="15"/>
+    
+    <!-- 11 oil plant -->
+    <placeable modName="FS22_TransportMissions" filename="$moddir$FS22_TransportMissions/triggers/trigger01.xml" id="58" position="990.10974121094 88.12451171875 199.34344482422" rotation="0 0 0" age="0.000000" price="10.000000" farmId="15"/>
+    <!-- 12 rail silo east -->
+    <placeable modName="FS22_TransportMissions" filename="$moddir$FS22_TransportMissions/triggers/trigger01.xml" id="59" position="928.10363769531 88.12451171875 477.80102539063" rotation="0 0 0" age="0.000000" price="10.000000" farmId="15"/>
+    <!-- 13 carpenter -->
+    <placeable modName="FS22_TransportMissions" filename="$moddir$FS22_TransportMissions/triggers/trigger01.xml" id="60" position="512.3701171875 82 788.43884277344" rotation="0 0 0" age="0.000000" price="10.000000" farmId="15"/>
+    <!-- 14 feed grain south -->
+    <placeable modName="FS22_TransportMissions" filename="$moddir$FS22_TransportMissions/triggers/trigger01.xml" id="61" position="58.630096435547 81 912.39569091797" rotation="0 93.642856577548 0" age="0.000000" price="10.000000" farmId="15"/>
+    <!-- 15 dairy -->
+    <placeable modName="FS22_TransportMissions" filename="$moddir$FS22_TransportMissions/triggers/trigger01.xml" id="62" position="-511.30670166016 86.500755310059 334.65313720703" rotation="0 0 0" age="0.000000" price="10.000000" farmId="15"/>
+    <!-- 16 rail silo west -->
+    <placeable modName="FS22_TransportMissions" filename="$moddir$FS22_TransportMissions/triggers/trigger01.xml" id="63" position="-711.83172607422 87.058685302734 586.54931640625" rotation="0 0 0" age="0.000000" price="10.000000" farmId="15"/>
+    <!-- 17 biomass heating -->
+    <placeable modName="FS22_TransportMissions" filename="$moddir$FS22_TransportMissions/triggers/trigger01.xml" id="64" position="-1006.2932739258 89.976654052734 853.53479003906" rotation="0 0 0" age="0.000000" price="10.000000" farmId="15"/>
+</placeables>
