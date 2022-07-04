@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<l10n>
+	<texts>
+		<!-- Mission descriptions -->
+		<text name="tc_bakery" text="Привезите хлебобулочные изделия. Пожалуйста, доставьте поддоны к '%s'." />
+		<text name="tc_flourmission" text="Запрос от мельницы: Перевезите несколько поддонов к '%s'." />
+		<text name="tc_fmarketproduce" text="Пожалуйста, отвезите покупателю продукты с фермерского рынка Джонсона. Доставить поддоны к '%s'." />
+		<text name="tc_fmarketseed" text="Возьмите поддоны с семенами или кормами на фермерском рынке Джонсона и доставьте их к '%s'." />
+		<text name="tc_sawmill" text="Подберите на лесопилке несколько досок или мебельных поддонов и отвезите их к '%s'." />
+		<text name="tc_cattle" text="У перекупщика животных есть для вас работа: возьмите поддоны с его двора и доставьте их к '%s'." />
+		<text name="tc_spinnery" text="Запрос от прядильной фабрики: Загрузитесь там поддонами тканей/одежды и доставте их к '%s'." />
+		<text name="tc_mall" text="Торговый центр звонил: загрузите там товары и доставьте их к '%s'." />
+		<text name="tc_gasbread" text="Звонок с заправочной станции: Несколько поддонов нужно отправить к '%s'. Они готовы на заправке." />
+		<text name="tc_container" text="Возьмите здесь несколько пустых контейнеров и отвезите их к '%s'." />
+		<text name="tc_bga" text="Новый заказ от биогазовой установки: возьмите там несколько поддонов и доставьте их к '%s'." />
+		<text name="tc_oilplant" text="У маслобойки следующий запрос: Забрать там продукты и доставить к '%s'." />
+		<text name="tc_rail" text="Запрос от Elmcreek Rail: возьмите несколько поддонов и отвезите их к '%s'." />
+		<text name="tc_carpenter" text="Плотник хочет избавиться от нескольких поддонов во дворе, отвезите их к '%s'." />
+		<text name="tc_feed" text="Запрос из 'Корм и зерно, юг': загрузите там несколько поддонов и доставьте их к '%s'." />
+		<text name="tc_dairy" text="Молочная ферма вызвала: Доставьте их продукцию к '%s'." />
+
+		<!-- Transport Trigger -->
+		<text name="grainmill" 	text="Зерновая мельница" />
+		<text name="farmers"  	text="Фермерский рынок" />
+		<text name="sawmill"  	text="Лесопилка" />
+		<text name="cattle"  	text="Перекупщик животных" />
+		<text name="spinnery"  	text="Прядильня" />
+		<text name="bowling"  	text="Боулинг-ресторан" />
+		<text name="mall"  		text="Торговый центр" />
+		<text name="gasstation" text="Заправочная станция" />
+		<text name="bga"  		text="BGA" />
+		<text name="bakery"  	text="Пекарня" />
+		<text name="oilplant" 	text="Маслобойка" />
+		<text name="siloeast"  	text="Восточный зерновой кооператив" />
+		<text name="carpenter" 	text="Плотницкая" />
+		<text name="feedsouth" 	text="Корм и зерно, юг" />
+		<text name="dairy" 		text="Молочная ферма" />
+		<text name="silowest"  	text="Западный зерновой бункер" />
+		<text name="heating" 	text="Биогазовый завод 1 МВт" />
+
+		<!-- Object descriptions -->
+		<text name="tc_boards" 	text="Планки" />
+		<text name="tc_bread" 	text="Хлеб" />
+		<text name="tc_butter" 	text="Масло" />
+		<text name="tc_cake" 	text="Торты" />
+		<text name="tc_canola" 	text="Рапсовое масло" />
+		<text name="tc_cereals" text="Кукурузные хлопья" />
+		<text name="tc_cheese" 	text="Сыр" />
+		<text name="tc_choco" 	text="Шоколад" />
+		<text name="tc_clothes" text="Одежда" />
+		<text name="tc_eggs" 	text="Яйца" />
+		<text name="tc_euro" 	text="Пустые поддоны" />
+		<text name="tc_fabrics" text="Ткань" />
+		<text name="tc_fillable" text="Поддон" />
+		<text name="tc_flour" 	text="Мука" />
+		<text name="tc_furniture" text="Мебель" />
+		<text name="tc_grape" 	text="Виноград" />
+		<text name="tc_honey" 	text="Мёд" />
+		<text name="tc_juice" 	text="Сок" />
+		<text name="tc_lettuce" text="Салат" />
+		<text name="tc_liquid" 	text="IBC" />
+		<text name="tc_oil" 	text="Подсолнечное масло" />
+		<text name="tc_pioneer" text="Семена" />
+		<text name="tc_schaumann" text="Корм" />
+		<text name="tc_strawberries" text="Клубника" />
+		<text name="tc_sugar" 	text="Сахар" />
+		<text name="tc_tomatoes" text="Помидоры" />
+		<text name="tc_wool" 	text="Шерсть" />
+	</texts>
+</l10n>
