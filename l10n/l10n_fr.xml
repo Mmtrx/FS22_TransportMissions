@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<l10n>
+	<texts>
+		<!-- Mission descriptions -->
+		<text name="tc_bakery" text="Distribuez des produits de boulangerie. Veuillez livrer les palettes au %s." />
+		<text name="tc_flourmission" text="Une demande du moulin à grains : Ramassez quelques palettes, et transportez-les au %s." />
+		<text name="tc_fmarketproduce" text="Veuillez apporter des produits du Johnson's Farmers Market au client. Livrer les palettes au %s." />
+		<text name="tc_fmarketseed" text="Procurez-vous des palettes de semences ou d'aliments pour animaux au Johnson's Farmers Market et livrez-les au %s." />
+		<text name="tc_sawmill" text="Ramassez quelques planches ou palettes de meubles à la scierie, et apportez-les au %s." />
+		<text name="tc_cattle" text="Le négociant en bétail a un travail pour vous : prenez les palettes de sa cour et livrez-les au %s." />
+		<text name="tc_spinnery" text="Demande de la filature : y charger les tissus/palettes de vêtements, et les livrer au %s." />
+		<text name="tc_mall" text="GrocerYmart a appelé : chargez-y quelques marchandises et livrez-les au %s." />
+		<text name="tc_gasbread" text="Un appel de la station service : Quelques palettes doivent aller au %s. Ils sont prêts à la station service." />
+		<text name="tc_container" text="Ramassez quelques conteneurs vides ici et apportez-les au %s." />
+		<text name="tc_bga" text="Une nouvelle commande de l'usine de biogaz : Récupérez-y quelques palettes et livrez-les au %s." />
+		<text name="tc_oilplant" text="Le moulin à huile a la requête suivante : ramassez les produits là-bas et livrez-les à %s." />
+		<text name="tc_rail" text="Demande d'Elmcreek Rail : Ramassez quelques palettes au silo ferroviaire et apportez-les au %s." />
+		<text name="tc_carpenter" text="Le menuisier veut se débarrasser de quelques palettes dans sa cour, apportez-les au %s." />
+		<text name="tc_feed" text="Demande de Fourrage &amp; céréales Sud : chargez-y des palettes et livrez-les au %s." />
+		<text name="tc_dairy" text="La laiterie appelée : Livre certains de leurs produits au %s." />
+
+		<!-- Transport Trigger -->
+		<text name="bakery"  	text="Boulangerie" />
+		<text name="bga"  		text="Usine de biogaz" />
+		<text name="bowling"  	text="Restaurant Bowling Red Marble" />
+		<text name="carpenter" 	text="Menuiserie" />
+		<text name="cattle"  	text="Négociant en bétail" />
+		<text name="dairy" 		text="Laiterie" />
+		<text name="farmers"  	text="Johnson's Farmers Market" />
+		<text name="feedsouth" 	text="Fourrage &amp; céréales Sud" />
+		<text name="gasstation" text="Station service" />
+		<text name="grainmill" 	text="Moulin à grains" />
+		<text name="heating" 	text="Energie de biomasse South Valley" />
+		<text name="mall"  		text="GrocerYmart" />
+		<text name="oilplant" 	text="Moulin à huile" />
+		<text name="sawmill"  	text="Scierie" />
+		<text name="siloeast"  	text="Silo à grains Est" />
+		<text name="silowest"  	text="Silo à grains Ouest" />
+		<text name="spinnery"  	text="Filature" />
+
+		<!-- Object descriptions -->
+		<text name="tc_boards" 	text="Planches" />
+		<text name="tc_bread" 	text="Pains" />
+		<text name="tc_butter" 	text="Beurre" />
+		<text name="tc_cake" 	text="Gâteaux" />
+		<text name="tc_canola" 	text="Huile de colza" />
+		<text name="tc_cereals" text="Flocons de céréales" />
+		<text name="tc_cheese" 	text="Fromage" />
+		<text name="tc_choco" 	text="Chocolat" />
+		<text name="tc_clothes" text="Vêtements" />
+		<text name="tc_eggs" 	text="Oeufs" />
+		<text name="tc_euro" 	text="Palettes" />
+		<text name="tc_fabrics" text="Tissus" />
+		<text name="tc_fillable" text="Récipients" />
+		<text name="tc_flour" 	text="Farine" />
+		<text name="tc_furniture" text="Meubles" />
+		<text name="tc_grape" 	text="Raisin" />
+		<text name="tc_honey" 	text="Miel" />
+		<text name="tc_juice" 	text="Jus" />
+		<text name="tc_lettuce" text="Salades" />
+		<text name="tc_liquid" 	text="Citernes" />
+		<text name="tc_oil" 	text="Huile de tournesol" />
+		<text name="tc_pioneer" text="Semences" />
+		<text name="tc_schaumann" text="Aliments pour animaux" />
+		<text name="tc_strawberries" text="Fraises" />
+		<text name="tc_sugar" 	text="Sucre" />
+		<text name="tc_tomatoes" text="Tomates" />
+		<text name="tc_wool" 	text="Laine" />
+	</texts>
+</l10n>
