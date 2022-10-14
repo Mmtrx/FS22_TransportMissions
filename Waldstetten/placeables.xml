@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<placeables version="1">
+    <!--- positions for Waldstetten map  - - - - - - - - - - - - - - - - - -->
+    <!-- 01 vehicle shop -->
+    <placeable modName="FS22_TransportMissionsW" filename="$moddir$FS22_TransportMissionsW/triggers/trigger01.xml" id="127" position="-250.16400146484 7.3000001907349 562.70001220703" rotation="0 39.999998836372 0" age="0.000000" price="10.000000" farmId="15"/>
+    <!-- 02 farmers market -->
+    <placeable modName="FS22_TransportMissionsW" filename="$moddir$FS22_TransportMissionsW/triggers/trigger01.xml" id="128" position="168.58236694336 7.2178993225098 931.45941162109" rotation="0 0 0" age="0.000000" price="10.000000" farmId="15"/>
+    <!-- 03 bauhof -->
+    <placeable modName="FS22_TransportMissionsW" filename="$moddir$FS22_TransportMissionsW/triggers/trigger01.xml" id="129" position="-1265.5899658203 32.754001617432 971.71600341797" rotation="-1.7639999799321 -30.000000834826 0" age="0.000000" price="10.000000" farmId="15"/>
+    <!-- 04 heizwerk -->
+    <placeable modName="FS22_TransportMissionsW" filename="$moddir$FS22_TransportMissionsW/triggers/trigger01.xml" id="130" position="-161.53309631348 7.2412452697754 478.86346435547" rotation="0 314.08433653007 0" age="0.000000" price="10.000000" farmId="1"/>
+    <!-- 05 carpenter -->
+    <placeable modName="FS22_TransportMissionsW" filename="$moddir$FS22_TransportMissionsW/triggers/trigger01.xml" id="131" position="132.34564208984 7.2178974151611 729.22076416016" rotation="0 359.64453965275 0" age="0.000000" price="10.000000" farmId="1"/>
+    <!-- 06 bakery -->
+    <placeable modName="FS22_TransportMissionsW" filename="$moddir$FS22_TransportMissionsW/triggers/trigger01.xml" id="136" position="-84.572761535645 7.2486705780029 825.94818115234" rotation="0 80.079207376548 0" age="0.000000" price="10.000000" farmId="1"/>
+    <!-- 07 gas station -->
+    <placeable modName="FS22_TransportMissionsW" filename="$moddir$FS22_TransportMissionsW/triggers/trigger01.xml" id="133" position="-226.2315826416 7.2412452697754 827.63000488281" rotation="0 18.91682703847 0" age="0.000000" price="10.000000" farmId="1"/>
+    <!-- 08 city hotel -->
+    <placeable modName="FS22_TransportMissionsW" filename="$moddir$FS22_TransportMissionsW/triggers/trigger01.xml" id="134" position="-364.0617980957 7.2485656738281 819.845703125" rotation="0 270 0" age="0.000000" price="10.000000" farmId="1"/>
+    <!-- 09 fuchs waldstetten -->
+    <placeable modName="FS22_TransportMissionsW" filename="$moddir$FS22_TransportMissionsW/triggers/trigger01.xml" id="135" position="-311.50894165039 7.2412452697754 831.93914794922" rotation="0 19.524449204771 0" age="0.000000" price="10.000000" farmId="1"/>
+    <!-- 10 pizzeria -->
+    <placeable modName="FS22_TransportMissionsW" filename="$moddir$FS22_TransportMissionsW/triggers/trigger01.xml" id="136" position="-76.413101196289 7.2412467002869 610.66723632813" rotation="0 37.229274542948 0" age="0.000000" price="10.000000" farmId="1"/>
+    <!-- 11 grain store -->
+    <placeable modName="FS22_TransportMissionsW" filename="$moddir$FS22_TransportMissionsW/triggers/trigger01.xml" id="137" position="1638.1923828125 81.061683654785 1049.0949707031" rotation="0 25.407969033178 0" age="0.000000" price="10.000000" farmId="1"/>
+    <!-- 12 pig farm -->
+    <placeable modName="FS22_TransportMissionsW" filename="$moddir$FS22_TransportMissionsW/triggers/trigger01.xml" id="138" position="1068.8541259766 65.315315246582 1158.7366943359" rotation="0 53.913367383254 0" age="0.000000" price="10.000000" farmId="1"/>
+    <!-- 13 refinery -->
+    <placeable modName="FS22_TransportMissionsW" filename="$moddir$FS22_TransportMissionsW/triggers/trigger01.xml" id="139" position="492.12677001953 74.704277038574 1682.5522460938" rotation="0 44.723238571976 0" age="0.000000" price="10.000000" farmId="1"/>
+    <!-- 14 reingrub farm -->
+    <placeable modName="FS22_TransportMissionsW" filename="$moddir$FS22_TransportMissionsW/triggers/trigger01.xml" id="140" position="-1032 60.083557128906 10.189999580383" rotation="0 290 0" age="0.000000" price="10.000000" farmId="1"/>
+    <!-- 15 rest area -->
+    <placeable modName="FS22_TransportMissionsW" filename="$moddir$FS22_TransportMissionsW/triggers/trigger01.xml" id="141" position="-1912.3253173828 95.297096252441 -43.992992401123" rotation="0 344.72440122221 0" age="0.000000" price="10.000000" farmId="1"/>
+    <!-- 16 raisinplant -->
+    <placeable modName="FS22_TransportMissionsW" filename="$moddir$FS22_TransportMissionsW/triggers/trigger01.xml" id="142" position="-611.76989746094 14.953309059143 -123.1149520874" rotation="0 0.38462785576155 0" age="0.000000" price="10.000000" farmId="1"/>
+    <!-- 17 sawmill -->
+    <placeable modName="FS22_TransportMissionsW" filename="$moddir$FS22_TransportMissionsW/triggers/trigger01.xml" id="143" position="-645.537109375 35.605911254883 -574.56079101563" rotation="0 316.04151357636 0" age="0.000000" price="10.000000" farmId="1"/>
+    <!-- 18 startfarm -->
+    <placeable modName="FS22_TransportMissionsW" filename="$moddir$FS22_TransportMissionsW/triggers/trigger01.xml" id="144" position="69.703338623047 41.549053192139 -244.47752380371" rotation="0 276.18541999561 0" age="0.000000" price="10.000000" farmId="1"/>
+    <!-- 19 steinbruch -->
+    <placeable modName="FS22_TransportMissionsW" filename="$moddir$FS22_TransportMissionsW/triggers/trigger01.xml" id="145" position="-846.51928710938 59.953311920166 -1455.6833496094" rotation="0 276.18541999561 0" age="0.000000" price="10.000000" farmId="1"/>
+    <!-- 20 liftstation -->
+    <placeable modName="FS22_TransportMissionsW" filename="$moddir$FS22_TransportMissionsW/triggers/trigger01.xml" id="146" position="-348.21408081055 93.381927490234 -1503.3944091797" rotation="0 276.18541999561 0" age="0.000000" price="10.000000" farmId="1"/>
+    <!-- 21 train station -->
+    <placeable modName="FS22_TransportMissionsW" filename="$moddir$FS22_TransportMissionsW/triggers/trigger01.xml" id="147" position="176.22993469238 80.307395935059 -1366.7983398438" rotation="0 271.67681212448 0" age="0.000000" price="10.000000" farmId="1"/>
+    <!-- 22 sugarmill -->
+    <placeable modName="FS22_TransportMissionsW" filename="$moddir$FS22_TransportMissionsW/triggers/trigger01.xml" id="148" position="237.36862182617 79.911422729492 -1351.5281982422" rotation="0 271.67681212448 0" age="0.000000" price="10.000000" farmId="1"/>
+    <!-- 23 industry Owalden -->
+    <placeable modName="FS22_TransportMissionsW" filename="$moddir$FS22_TransportMissionsW/triggers/trigger01.xml" id="149" position="360.5895690918 79.124000549316 -1313.9616699219" rotation="0 79.13980865763 0" age="0.000000" price="10.000000" farmId="1"/>
+    <!-- 24 Fuchs Owalden -->
+    <placeable modName="FS22_TransportMissionsW" filename="$moddir$FS22_TransportMissionsW/triggers/trigger01.xml" id="150" position="183.00413513184 80.287940979004 -1182.7600097656" rotation="0 274.83156721909 0" age="0.000000" price="10.000000" farmId="1"/>
+    <!-- 25 tailor-->
+    <placeable modName="FS22_TransportMissionsW" filename="$moddir$FS22_TransportMissionsW/triggers/trigger01.xml" id="151" position="472.70678710938 78.539810180664 -1227.5615234375" rotation="0 269.02997721732 0" age="0.000000" price="10.000000" farmId="1"/>
+    <!-- 26 cattle dealer -->
+    <placeable modName="FS22_TransportMissionsW" filename="$moddir$FS22_TransportMissionsW/triggers/trigger01.xml" id="152" position="510 78.48999786377 -1249.9000244141" rotation="0 0 0" age="0.000000" price="10.000000" farmId="1"/>
+    <!-- 27 spinnery -->
+    <placeable modName="FS22_TransportMissionsW" filename="$moddir$FS22_TransportMissionsW/triggers/trigger01.xml" id="153" position="670.39288330078 73.320739746094 -1150.6147460938" rotation="0 269.02997721732 0" age="0.000000" price="10.000000" farmId="1"/>
+    <!-- 28 Buchen road -->
+    <placeable modName="FS22_TransportMissionsW" filename="$moddir$FS22_TransportMissionsW/triggers/trigger01.xml" id="154" position="1321.58984375 127.37552642822 -1680.4682617188" rotation="0 271.94034814342 0" age="0.000000" price="10.000000" farmId="1"/>
+    <!-- 29 bga -->
+    <placeable modName="FS22_TransportMissionsW" filename="$moddir$FS22_TransportMissionsW/triggers/trigger01.xml" id="155" position="785.24981689453 18.634243011475 -654.63922119141" rotation="0 229.17570046689 0" age="0.000000" price="10.000000" farmId="1"/>
+    <!-- 30 contractor Eberbauer -->
+    <placeable modName="FS22_TransportMissionsW" filename="$moddir$FS22_TransportMissionsW/triggers/trigger01.xml" id="156" position="-380.34356689453 91.023345947266 -932.75817871094" rotation="0 90 0" age="0.000000" price="10.000000" farmId="1"/>
+</placeables>

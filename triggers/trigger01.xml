@@ -2,8 +2,8 @@
 <placeable type="simplePlaceable" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../../shared/xml/schema/placeable.xsd">
     <storeData>
         <name>"Transport Trigger"</name>
-        <!--image>Store.dds</image-->
-        <price>10000000</price>
+        <image>store.dds</image>
+        <price>10</price>
         <functions>
             <function>"Inserts trigger for transport mission"</function>
         </functions>
@@ -27,7 +27,7 @@
         <textureMemoryUsage>2424832</textureMemoryUsage>
     </storeData>
     <base>
-        <filename>triggers/transport19.i3d</filename>
+        <filename>triggers/transport01.i3d</filename>
     </base>
     <placement useRandomYRotation="false" useManualYRotation="true" >
         <testAreas/>

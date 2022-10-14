@@ -1,0 +1,333 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<transportMissions>
+	<!--- definitions for Waldstetten map - - - - - - - - - - - - - - - - - 
+		<pickupTrigger index="TRANS01" title="$l10n_shop" /> 
+		<pickupTrigger index="TRANS02" title="$l10n_farmers" />
+		<pickupTrigger index="TRANS03" title="$l10n_communal" /> 
+		<pickupTrigger index="TRANS04" title="$l10n_heating" />
+		<pickupTrigger index="TRANS05" title="$l10n_carpenter" />
+		<pickupTrigger index="TRANS06" title="$l10n_bakery" />
+		<pickupTrigger index="TRANS07" title="$l10n_gasstation" />
+		<pickupTrigger index="TRANS08" title="$l10n_hotel" 		/>
+		<pickupTrigger index="TRANS09" title="$l10n_fuchs01" 	/>
+		<pickupTrigger index="TRANS10" title="$l10n_pizza" 		/>
+		<pickupTrigger index="TRANS11" title="$l10n_grainsilo" /> 
+		<pickupTrigger index="TRANS12" title="$l10n_pigfarm" 	/>
+		<pickupTrigger index="TRANS13" title="$l10n_refinery" 	/> 
+		<pickupTrigger index="TRANS14" title="$l10n_reingrub" 	/>
+		<pickupTrigger index="TRANS15" title="$l10n_restarea" 	/>
+		<pickupTrigger index="TRANS16" title="$l10n_raisinplant" />
+		<pickupTrigger index="TRANS17" title="$l10n_sawmill" 	/>
+		<pickupTrigger index="TRANS18" title="$l10n_startfarm" 	/>
+		<pickupTrigger index="TRANS19" title="$l10n_quarry" 	/>
+		<pickupTrigger index="TRANS20" title="$l10n_liftstation" />
+		<pickupTrigger index="TRANS21" title="$l10n_trainstation" /> 
+		<pickupTrigger index="TRANS22" title="$l10n_sugarmill" 	/>
+		<pickupTrigger index="TRANS23" title="$l10n_industry" 	/> 
+		<pickupTrigger index="TRANS24" title="$l10n_fuchs02" 	/>
+		<pickupTrigger index="TRANS25" title="$l10n_tailor" 	/>
+		<pickupTrigger index="TRANS26" title="$l10n_cattle" 	/>
+		<pickupTrigger index="TRANS27" title="$l10n_spinnery" 	/>
+		<pickupTrigger index="TRANS28" title="$l10n_roadbuchen" />
+		<pickupTrigger index="TRANS29" title="$l10n_bga" 		/>
+		<pickupTrigger index="TRANS30" title="$l10n_contractor" />
+	- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+	<mission name="BAKERY" rewardScale="1.0" npcName="NPC_Waldstetten_01" description="$l10n_tc_bakery">
+		<pickupTrigger index="TRANS06" title="$l10n_bakery" />
+		<pickupTrigger index="TRANS25" title="$l10n_bakery" />
+
+		<dropoffTrigger index="TRANS01" title="$l10n_shop" />
+		<dropoffTrigger index="TRANS02" title="$l10n_farmers" />
+		<dropoffTrigger index="TRANS03" title="$l10n_communal" />
+		<dropoffTrigger index="TRANS04" title="$l10n_heating" />
+		<dropoffTrigger index="TRANS05" title="$l10n_carpenter" />
+		<dropoffTrigger index="TRANS06" title="$l10n_bakery" />
+		<dropoffTrigger index="TRANS07" title="$l10n_gasstation" />
+		<dropoffTrigger index="TRANS08" title="$l10n_hotel" />
+		<dropoffTrigger index="TRANS09" title="$l10n_fuchs01" />
+		<dropoffTrigger index="TRANS10" title="$l10n_pizza" />
+		<dropoffTrigger index="TRANS11" title="$l10n_grainsilo" /> 
+		<dropoffTrigger index="TRANS12" title="$l10n_pigfarm" />
+		<dropoffTrigger index="TRANS13" title="$l10n_refinery" /> 
+		<dropoffTrigger index="TRANS14" title="$l10n_reingrub" />
+		<dropoffTrigger index="TRANS15" title="$l10n_restarea" />
+		<dropoffTrigger index="TRANS16" title="$l10n_raisinplant" />
+		<dropoffTrigger index="TRANS17" title="$l10n_sawmill" />
+		<dropoffTrigger index="TRANS18" title="$l10n_startfarm" />
+		<dropoffTrigger index="TRANS19" title="$l10n_quarry" />
+		<dropoffTrigger index="TRANS20" title="$l10n_liftstation" />
+		<dropoffTrigger index="TRANS21" title="$l10n_trainstation" /> 
+		<dropoffTrigger index="TRANS22" title="$l10n_sugarmill" />
+		<dropoffTrigger index="TRANS23" title="$l10n_industry" /> 
+		<dropoffTrigger index="TRANS24" title="$l10n_fuchs02" />
+		<dropoffTrigger index="TRANS25" title="$l10n_tailor" />
+		<dropoffTrigger index="TRANS26" title="$l10n_cattle" />
+		<dropoffTrigger index="TRANS27" title="$l10n_spinnery" />
+		<dropoffTrigger index="TRANS28" title="$l10n_roadbuchen" />
+		<dropoffTrigger index="TRANS29" title="$l10n_bga" />
+		<dropoffTrigger index="TRANS30" title="$l10n_contractor" />
+
+		<object filename="$data/objects/pallets/bakeryBoxPallet/bakeryBoxPallet.xml" min="4" max="6" size="1.2 1 0.8" title="$l10n_tc_bread" />
+		<object filename="$data/objects/pallets/cakePallet/cakePallet.xml" min="4" max="6" size="1.2 1 0.8" title="$l10n_tc_cake" />
+	</mission>
+	<!-- vehicle shop: industrial -->
+	<mission name="FABRICS" rewardScale="1.0" npcName="NPC_Waldstetten_07" description="$l10n_tc_shop">
+		<pickupTrigger index="TRANS01" title="$l10n_shop" />
+		<dropoffTrigger index="TRANS07" title="$l10n_gasstation" /> 
+		<dropoffTrigger index="TRANS13" title="$l10n_refinery" /> 
+		<dropoffTrigger index="TRANS15" title="$l10n_restarea" />
+		<dropoffTrigger index="TRANS17" title="$l10n_sawmill" />
+		<dropoffTrigger index="TRANS19" title="$l10n_quarry" />
+		<dropoffTrigger index="TRANS21" title="$l10n_trainstation" /> 
+
+		<object filename="$data/objects/pallets/liquidTank/fertilizerTank.xml" min="4" max="6" size="1.7 1.8 2" title="$l10n_tc_liquid" />
+		<object filename="$data/objects/pallets/fillablePallet/fillablePallet.xml" min="4" max="6" size="1.2 1.2 1.1" title="$l10n_tc_fillable" />
+		<object filename="$data/objects/pallets/grapePallet/grapePallet.xml" min="4" max="6" size="1.2 1.2 1.1" title="$l10n_tc_grape" />
+		<object filename="$data/objects/pallets/boardsStackPallet/boardsStackPallet.xml" min="4" max="6" size="1 1.2 0.8" title="$l10n_tc_boards" />
+	</mission>
+	<!-- farmermarket: produce -->
+	<mission name="PRODUCE" rewardScale="1.0" npcName="NPC_Waldstetten_08" description="$l10n_tc_fmarketproduce">
+		<pickupTrigger index="TRANS02" title="$l10n_farmers" />
+		<dropoffTrigger index="TRANS08" title="$l10n_hotel" />
+		<dropoffTrigger index="TRANS10" title="$l10n_pizza" />
+		<dropoffTrigger index="TRANS15" title="$l10n_restarea" />
+		<dropoffTrigger index="TRANS19" title="$l10n_quarry" />
+		<dropoffTrigger index="TRANS20" title="$l10n_liftstation" />
+		<dropoffTrigger index="TRANS21" title="$l10n_trainstation" /> 
+		<dropoffTrigger index="TRANS28" title="$l10n_roadbuchen" />
+
+		<object filename="$data/objects/pallets/eggBoxPallet/eggBoxPallet.xml" min="4" max="6" size="1.2 1 0.8" title="$l10n_tc_eggs" />
+		<object filename="$data/objects/pallets/honeyBoxPallet/honeyBoxPallet.xml" min="4" max="6" size="1.2 1 0.8" title="$l10n_tc_honey" />
+		<object filename="$data/objects/pallets/lettuceBoxPallet/lettuceBoxPallet.xml" min="4" max="6" size="1.2 1 0.8" title="$l10n_tc_lettuce" />
+		<object filename="$data/objects/pallets/strawberriesBoxPallet/strawberriesBoxPallet.xml" min="4" max="6" size="1.2 1 0.8" title="$l10n_tc_strawberries" />
+		<object filename="$data/objects/pallets/tomatoesBoxPallet/tomatoesBoxPallet.xml" min="4" max="6" size="1.2 1 1.5" title="$l10n_tc_tomatoes" />
+	</mission>
+	<!-- farmermarket: supplies -->
+	<mission name="SEED" rewardScale="1.0" npcName="NPC_Waldstetten_08" description="$l10n_tc_fmarketseed">
+		<pickupTrigger index="TRANS02" title="$l10n_farmers" />
+		<dropoffTrigger index="TRANS03" title="$l10n_communal" />
+		<dropoffTrigger index="TRANS12" title="$l10n_pigfarm" />
+		<dropoffTrigger index="TRANS14" title="$l10n_reingrub" />
+		<dropoffTrigger index="TRANS18" title="$l10n_startfarm" />
+		<dropoffTrigger index="TRANS30" title="$l10n_contractor" />
+
+		<object filename="$data/objects/pallets/pioneer/pioneerPallet.xml" min="4" max="6" size="1.8 1.8 0.8" title="$l10n_tc_pioneer" />
+		<object filename="$data/objects/pallets/schaumann/schaumannPallet.xml" min="4" max="6" size="1.4 1.2 1.1" title="$l10n_tc_schaumann" />
+	</mission>
+	<!-- farms: produce, empty -->
+	<mission name="FARMS" rewardScale="1.0" npcName="NPC_Waldstetten_09" description="$l10n_tc_farms">
+		<pickupTrigger index="TRANS03" title="$l10n_communal" />
+		<pickupTrigger index="TRANS12" title="$l10n_pigfarm" />
+		<pickupTrigger index="TRANS14" title="$l10n_reingrub" />
+		<pickupTrigger index="TRANS18" title="$l10n_startfarm" />
+		<pickupTrigger index="TRANS30" title="$l10n_contractor" />
+		<dropoffTrigger index="TRANS01" title="$l10n_shop" />
+		<dropoffTrigger index="TRANS07" title="$l10n_gasstation" />
+		<dropoffTrigger index="TRANS08" title="$l10n_hotel" />
+		<dropoffTrigger index="TRANS09" title="$l10n_fuchs01" />
+		<dropoffTrigger index="TRANS11" title="$l10n_grainsilo" /> 
+		<dropoffTrigger index="TRANS15" title="$l10n_restarea" />
+		<dropoffTrigger index="TRANS16" title="$l10n_raisinplant" />
+		<dropoffTrigger index="TRANS24" title="$l10n_fuchs02" />
+
+		<object filename="$data/objects/pallets/liquidTank/fertilizerTank.xml" min="4" max="6" size="1.7 1.8 2" title="$l10n_tc_liquid" />
+		<object filename="$data/objects/pallets/fillablePallet/fillablePallet.xml" min="4" max="6" size="1.2 1.2 1.1" title="$l10n_tc_fillable" />
+		<object filename="$data/objects/pallets/grapePallet/grapePallet.xml" min="4" max="6" size="1.2 1.2 1.1" title="$l10n_tc_grape" />
+		<object filename="$data/objects/pallets/eggBoxPallet/eggBoxPallet.xml" min="4" max="6" size="1.2 1 0.8" title="$l10n_tc_eggs" />
+		<object filename="$data/objects/pallets/honeyBoxPallet/honeyBoxPallet.xml" min="4" max="6" size="1.2 1 0.8" title="$l10n_tc_honey" />
+		<object filename="$data/objects/pallets/lettuceBoxPallet/lettuceBoxPallet.xml" min="4" max="6" size="1.2 1 0.8" title="$l10n_tc_lettuce" />
+	</mission>
+	<!-- industries: empty -->
+	<mission name="INDUSTRY" rewardScale="1.0" npcName="NPC_Waldstetten_10" description="$l10n_tc_container">
+		<pickupTrigger index="TRANS01" title="$l10n_shop" /> 
+		<pickupTrigger index="TRANS04" title="$l10n_heating" />
+		<pickupTrigger index="TRANS07" title="$l10n_gasstation" />
+		<pickupTrigger index="TRANS11" title="$l10n_grainsilo" /> 
+		<pickupTrigger index="TRANS13" title="$l10n_refinery" 	/> 
+		<pickupTrigger index="TRANS16" title="$l10n_raisinplant" />
+		<pickupTrigger index="TRANS17" title="$l10n_sawmill" 	/>
+		<pickupTrigger index="TRANS19" title="$l10n_quarry" 	/>
+		<pickupTrigger index="TRANS22" title="$l10n_sugarmill" 	/>
+		<pickupTrigger index="TRANS23" title="$l10n_industry" 	/> 
+		<pickupTrigger index="TRANS27" title="$l10n_spinnery" 	/>
+		<pickupTrigger index="TRANS29" title="$l10n_bga" 		/>
+		<dropoffTrigger index="TRANS01" title="$l10n_shop" /> 
+		<dropoffTrigger index="TRANS04" title="$l10n_heating" />
+		<dropoffTrigger index="TRANS07" title="$l10n_gasstation" />
+		<dropoffTrigger index="TRANS11" title="$l10n_grainsilo" /> 
+		<dropoffTrigger index="TRANS13" title="$l10n_refinery" 	/> 
+		<dropoffTrigger index="TRANS16" title="$l10n_raisinplant" />
+		<dropoffTrigger index="TRANS17" title="$l10n_sawmill" 	/>
+		<dropoffTrigger index="TRANS19" title="$l10n_quarry" 	/>
+		<dropoffTrigger index="TRANS22" title="$l10n_sugarmill" 	/>
+		<dropoffTrigger index="TRANS23" title="$l10n_industry" 	/> 
+		<dropoffTrigger index="TRANS27" title="$l10n_spinnery" 	/>
+		<dropoffTrigger index="TRANS29" title="$l10n_bga" 		/>
+
+		<object filename="$data/objects/pallets/liquidTank/fertilizerTank.xml" min="4" max="6" size="1.7 1.8 2" title="$l10n_tc_liquid" />
+		<object filename="$data/objects/pallets/fillablePallet/fillablePallet.xml" min="4" max="6" size="1.2 1.2 1.1" title="$l10n_tc_fillable" />
+		<object filename="$data/objects/pallets/grapePallet/grapePallet.xml" min="4" max="6" size="1.2 1.2 1.1" title="$l10n_tc_grape" />
+		<object filename="$data/objects/pallets/boardsStackPallet/boardsStackPallet.xml" min="4" max="6" size="1 1.2 0.8" title="$l10n_tc_boards" />
+	</mission>
+	<!-- hotel & shops: food stuff -->
+	<mission name="HOTEL" rewardScale="1.0" npcName="NPC_Waldstetten_11" description="$l10n_tc_hotel">
+		<pickupTrigger index="TRANS08" title="$l10n_hotel" 		/>
+		<pickupTrigger index="TRANS09" title="$l10n_fuchs01" 	/>
+		<pickupTrigger index="TRANS15" title="$l10n_restarea" 	/>
+		<pickupTrigger index="TRANS20" title="$l10n_liftstation" />
+		<pickupTrigger index="TRANS21" title="$l10n_trainstation" /> 
+		<pickupTrigger index="TRANS24" title="$l10n_fuchs02" 	/>
+		<dropoffTrigger index="TRANS08" title="$l10n_hotel" 		/>
+		<dropoffTrigger index="TRANS09" title="$l10n_fuchs01" 	/>
+		<dropoffTrigger index="TRANS15" title="$l10n_restarea" 	/>
+		<dropoffTrigger index="TRANS20" title="$l10n_liftstation" />
+		<dropoffTrigger index="TRANS21" title="$l10n_trainstation" /> 
+		<dropoffTrigger index="TRANS24" title="$l10n_fuchs02" 	/>
+
+		<object filename="$data/objects/pallets/butterBoxPallet/butterBoxPallet.xml" min="4" max="6" size="1.2 1 1.1" title="$l10n_tc_butter" />
+		<object filename="$data/objects/pallets/cheesePallet/cheesePallet.xml" min="4" max="6" size="1.2 1 1.5" title="$l10n_tc_cheese" />
+		<object filename="$data/objects/pallets/sugarPallet/sugarBoxPallet.xml" min="4" max="6" size="1.2 1 1.5" title="$l10n_tc_sugar" />
+		<object filename="$data/objects/pallets/grapeJuicePallet/grapeJuicePallet.xml" min="4" max="6" size="1.2 1 0.8" title="$l10n_tc_juice" />
+		<object filename="$data/objects/pallets/cerealsPallet/cerealsPallet.xml" min="4" max="6" size="1.4 1 1.5" title="$l10n_tc_cereals" />
+		<object filename="$data/objects/pallets/chocolateBoxPallet/chocolateBoxPallet.xml" min="4" max="6" size="1.3 1 1.1" title="$l10n_tc_choco" />
+		<object filename="$data/objects/pallets/clothesBoxPallet/clothesBoxPallet.xml" min="4" max="6" size="1.2 1 1" title="$l10n_tc_clothes" />
+		<object filename="$data/objects/pallets/furnitureStackPallet/furnitureStackPallet.xml" min="4" max="6" size="1.2 1 0.8" title="$l10n_tc_furniture" />
+	</mission>
+	<!-- carpenter: liquid, boards, furniture -->
+	<mission name="CARPENTER" rewardScale="1.0" npcName="NPC_Waldstetten_12" description="$l10n_tc_carpenter">
+		<pickupTrigger index="TRANS05" title="$l10n_carpenter" />
+		<dropoffTrigger index="TRANS03" title="$l10n_communal" />
+		<dropoffTrigger index="TRANS08" title="$l10n_hotel" 		/>
+		<dropoffTrigger index="TRANS09" title="$l10n_fuchs01" 	/>
+		<dropoffTrigger index="TRANS15" title="$l10n_restarea" 	/>
+		<dropoffTrigger index="TRANS20" title="$l10n_liftstation" />
+		<dropoffTrigger index="TRANS21" title="$l10n_trainstation" /> 
+		<dropoffTrigger index="TRANS24" title="$l10n_fuchs02" 	/>
+		<dropoffTrigger index="TRANS30" title="$l10n_contractor" />
+
+		<object filename="$data/objects/pallets/boardsStackPallet/boardsStackPallet.xml" min="4" max="6" size="1 1.2 0.8" title="$l10n_tc_boards" />
+		<object filename="$data/objects/pallets/furnitureStackPallet/furnitureStackPallet.xml" min="4" max="6" size="1.2 1 0.8" title="$l10n_tc_furniture" />
+		<object filename="$data/objects/pallets/liquidTank/fertilizerTank.xml" min="4" max="6" size="1.7 1.8 2" title="$l10n_tc_liquid" />
+	</mission>
+	<!-- grainsilo: flour, sugar, empty -->
+	<mission name="SILO" rewardScale="1.0" npcName="NPC_Waldstetten_13" description="$l10n_tc_grainsilo">
+		<pickupTrigger index="TRANS11" title="$l10n_grainsilo" />
+		<dropoffTrigger index="TRANS03" title="$l10n_communal" />
+		<dropoffTrigger index="TRANS08" title="$l10n_hotel" 		/>
+		<dropoffTrigger index="TRANS09" title="$l10n_fuchs01" 	/>
+		<dropoffTrigger index="TRANS16" title="$l10n_raisinplant" />
+		<dropoffTrigger index="TRANS17" title="$l10n_sawmill" />
+		<dropoffTrigger index="TRANS21" title="$l10n_trainstation" /> 
+		<dropoffTrigger index="TRANS22" title="$l10n_sugarmill" />
+		<dropoffTrigger index="TRANS24" title="$l10n_fuchs02" />
+		<dropoffTrigger index="TRANS28" title="$l10n_roadbuchen" />
+		<dropoffTrigger index="TRANS30" title="$l10n_contractor" />
+
+		<object filename="$data/objects/pallets/flourPallet/flourBoxPallet.xml" min="4" max="6" size="1.2 1 0.8" title="$l10n_tc_flour" />
+		<object filename="$data/objects/pallets/sugarPallet/sugarBoxPallet.xml" min="4" max="6" size="1.2 1 1.5" title="$l10n_tc_sugar" />
+		<object filename="$data/objects/pallets/liquidTank/fertilizerTank.xml" min="4" max="6" size="1.7 1.8 2" title="$l10n_tc_liquid" />
+		<object filename="$data/objects/pallets/fillablePallet/fillablePallet.xml" min="4" max="6" size="1.2 1.2 1.1" title="$l10n_tc_fillable" />
+		<object filename="$data/objects/pallets/grapePallet/grapePallet.xml" min="4" max="6" size="1.2 1.2 1.1" title="$l10n_tc_grape" />
+	</mission>
+	<!-- sawmill: boards, furniture -->
+	<mission name="BOARDS" rewardScale="1.0" npcName="NPC_Waldstetten_14" description="$l10n_tc_sawmill">
+		<pickupTrigger index="TRANS17" title="$l10n_sawmill" />
+		<dropoffTrigger index="TRANS03" title="$l10n_communal" />
+		<dropoffTrigger index="TRANS08" title="$l10n_hotel" 		/>
+		<dropoffTrigger index="TRANS09" title="$l10n_fuchs01" 	/>
+		<dropoffTrigger index="TRANS24" title="$l10n_fuchs02" />
+		<dropoffTrigger index="TRANS05" title="$l10n_carpenter" /> 
+
+		<object filename="$data/objects/pallets/boardsStackPallet/boardsStackPallet.xml" min="4" max="6" size="1 1.2 0.8" title="$l10n_tc_boards" />
+		<object filename="$data/objects/pallets/furnitureStackPallet/furnitureStackPallet.xml" min="4" max="6" size="1.2 1 0.8" title="$l10n_tc_furniture" />
+	</mission>
+	<!-- cattle dealer: wool, liquid tank -->
+	<mission name="CATTLE" rewardScale="1.0" npcName="NPC_Waldstetten_15" description="$l10n_tc_cattle">
+		<pickupTrigger index="TRANS26" title="$l10n_cattle" />
+		<dropoffTrigger index="TRANS05" title="$l10n_carpenter" /> 
+		<dropoffTrigger index="TRANS08" title="$l10n_hotel" />
+		<dropoffTrigger index="TRANS09" title="$l10n_fuchs01" />
+		<dropoffTrigger index="TRANS12" title="$l10n_pigfarm" />
+		<dropoffTrigger index="TRANS27" title="$l10n_spinnery" />
+
+		<object filename="$data/objects/pallets/woolPallet/woolPallet.xml" min="4" max="6" size="1.8 1.5 2" title="$l10n_tc_wool" />
+		<object filename="$data/objects/pallets/liquidTank/fertilizerTank.xml" min="4" max="6" size="1.8 2 2" title="$l10n_tc_liquid" />
+	</mission>
+	<!-- spinnery: fabrics, clothes -->
+	<mission name="FABRICS" rewardScale="1.0" npcName="NPC_Waldstetten_02" description="$l10n_tc_spinnery">
+		<pickupTrigger index="TRANS27" title="$l10n_spinnery" />
+		<dropoffTrigger index="TRANS08" title="$l10n_hotel" 		/>
+		<dropoffTrigger index="TRANS09" title="$l10n_fuchs01" 	/>
+		<dropoffTrigger index="TRANS15" title="$l10n_restarea" 	/>
+		<dropoffTrigger index="TRANS21" title="$l10n_trainstation" /> 
+		<dropoffTrigger index="TRANS24" title="$l10n_fuchs02" 	/>
+		<dropoffTrigger index="TRANS25" title="$l10n_tailor" />
+
+		<object filename="$data/objects/pallets/fabricsPallet/fabricsPallet.xml" min="4" max="6" size="1.2 1 0.8" title="$l10n_tc_fabrics" />
+		<object filename="$data/objects/pallets/clothesBoxPallet/clothesBoxPallet.xml" min="4" max="6" size="1.2 1 1" title="$l10n_tc_clothes" />
+	</mission>
+	<!-- sugar mill -->
+	<mission name="SUGAR" rewardScale="1.0" npcName="NPC_Waldstetten_03" description="$l10n_tc_sugarmill">
+		<pickupTrigger index="TRANS22" title="$l10n_sugarmill" />
+		<dropoffTrigger index="TRANS06" title="$l10n_bakery" />
+		<dropoffTrigger index="TRANS08" title="$l10n_hotel" />
+		<dropoffTrigger index="TRANS09" title="$l10n_fuchs01" />
+		<dropoffTrigger index="TRANS10" title="$l10n_pizza" />
+		<dropoffTrigger index="TRANS15" title="$l10n_restarea" />
+		<dropoffTrigger index="TRANS16" title="$l10n_raisinplant" />
+		<dropoffTrigger index="TRANS21" title="$l10n_trainstation" /> 
+		<dropoffTrigger index="TRANS24" title="$l10n_fuchs02" 	/>
+
+		<object filename="$data/objects/pallets/sugarPallet/sugarBoxPallet.xml" min="4" max="6" size="1.2 1 1.5" title="$l10n_tc_sugar" />
+	</mission>
+	<!-- tailor -->
+	<mission name="TAILOR" rewardScale="1.0" npcName="NPC_Waldstetten_04" description="$l10n_tc_tailor">
+		<pickupTrigger index="TRANS25" title="$l10n_tailor" />
+		<dropoffTrigger index="TRANS08" title="$l10n_hotel" />
+		<dropoffTrigger index="TRANS09" title="$l10n_fuchs01" />
+		<dropoffTrigger index="TRANS03" title="$l10n_communal" />
+		<dropoffTrigger index="TRANS12" title="$l10n_pigfarm" />
+		<dropoffTrigger index="TRANS14" title="$l10n_reingrub" />
+		<dropoffTrigger index="TRANS18" title="$l10n_startfarm" />
+		<dropoffTrigger index="TRANS21" title="$l10n_trainstation" /> 
+		<dropoffTrigger index="TRANS24" title="$l10n_fuchs02" 	/>
+		<dropoffTrigger index="TRANS30" title="$l10n_contractor" />
+
+		<object filename="$data/objects/pallets/clothesBoxPallet/clothesBoxPallet.xml" min="4" max="6" size="1.2 1 1" title="$l10n_tc_clothes" />
+	</mission>
+	<!-- road Buchen -->
+	<mission name="BUCHEN" rewardScale="1.0" npcName="NPC_Waldstetten_05" description="$l10n_tc_buchen">
+		<pickupTrigger index="TRANS28" title="$l10n_roadbuchen" />
+		<dropoffTrigger index="TRANS03" title="$l10n_communal" />
+		<dropoffTrigger index="TRANS08" title="$l10n_hotel" />
+		<dropoffTrigger index="TRANS09" title="$l10n_fuchs01" />
+		<dropoffTrigger index="TRANS12" title="$l10n_pigfarm" />
+		<dropoffTrigger index="TRANS14" title="$l10n_reingrub" />
+		<dropoffTrigger index="TRANS18" title="$l10n_startfarm" />
+		<dropoffTrigger index="TRANS21" title="$l10n_trainstation" /> 
+		<dropoffTrigger index="TRANS24" title="$l10n_fuchs02" 	/>
+		<dropoffTrigger index="TRANS30" title="$l10n_contractor" />
+
+		<object filename="$data/objects/pallets/canolaOilPallet/canolaOilPallet.xml" min="4" max="6" size="1.2 1 1" title="$l10n_tc_canola" />
+		<object filename="$data/objects/pallets/sunflowerOilPallet/sunflowerOilPallet.xml" min="4" max="6" size="1.2 1 1.5" title="$l10n_tc_oil" />
+		<object filename="$data/objects/pallets/clothesBoxPallet/clothesBoxPallet.xml" min="4" max="6" size="1.2 1 1" title="$l10n_tc_clothes" />
+		<object filename="$data/objects/pallets/furnitureStackPallet/furnitureStackPallet.xml" min="4" max="6" size="1.2 1 0.8" title="$l10n_tc_furniture" />
+		<object filename="$data/objects/pallets/strawberriesBoxPallet/strawberriesBoxPallet.xml" min="4" max="6" size="1.2 1 0.8" title="$l10n_tc_strawberries" />
+		<object filename="$data/objects/pallets/tomatoesBoxPallet/tomatoesBoxPallet.xml" min="4" max="6" size="1.2 1 1.5" title="$l10n_tc_tomatoes" />
+	</mission>
+	<!-- Oberwalden oil industry -->
+	<mission name="OILIND" rewardScale="1.0" npcName="NPC_Waldstetten_06" description="$l10n_tc_oilind">
+		<pickupTrigger index="TRANS23" title="$l10n_industry" />
+		<dropoffTrigger index="TRANS03" title="$l10n_communal" />
+		<dropoffTrigger index="TRANS08" title="$l10n_hotel" />
+		<dropoffTrigger index="TRANS09" title="$l10n_fuchs01" />
+		<dropoffTrigger index="TRANS10" title="$l10n_pizza" />
+		<dropoffTrigger index="TRANS15" title="$l10n_restarea" />
+		<dropoffTrigger index="TRANS24" title="$l10n_fuchs02" 	/>
+
+		<object filename="$data/objects/pallets/canolaOilPallet/canolaOilPallet.xml" min="4" max="6" size="1.2 1 1" title="$l10n_tc_canola" />
+		<object filename="$data/objects/pallets/sunflowerOilPallet/sunflowerOilPallet.xml" min="4" max="6" size="1.2 1 1.5" title="$l10n_tc_oil" />
+		<object filename="$data/objects/pallets/liquidTank/fertilizerTank.xml" min="4" max="6" size="1.7 1.8 2" title="$l10n_tc_liquid" />
+	</mission>
+
+</transportMissions>

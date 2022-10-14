@@ -5,7 +5,8 @@
 -- Author:      Mmtrx
 -- Changelog:
 --  v1.0.0.0    09.02.2022  initial 
---  		    14.03.2022  MP: transp mission / trigger handling ok. 
+--  (modHub)    14.03.2022  MP: transp mission / trigger handling ok. 
+--  v1.0.1.0 	28.04.2022  Waldstetten special
 --=======================================================================================================
 InitRoyalUtility(Utils.getFilename("lib/utility/", g_currentModDirectory))
 InitRoyalMod(Utils.getFilename("lib/rmod/", g_currentModDirectory))
@@ -18,7 +19,7 @@ function Trans:initialize()
 	if self.initialized ~= nil then return end -- run only once
 
 	-- check for debug switch in modSettings/
-	self.modSettings= string.sub(g_modsDirectory,1,-3) .. "Settings/"
+	self.modSettings= getUserProfileAppPath().."modSettings/"
 	if not self.debug and      
 		fileExists(self.modSettings.."Trans.debug") then
 		self.debug = true 
@@ -32,27 +33,47 @@ function Trans:initialize()
 		MissionManager.hasFarmReachedMissionLimit =
 		Utils.overwrittenFunction(nil, function() return false end)
 	end
+	self.isModMap = false 
 	self.maps = { 				 -- max transport missions
 		MapUS = {dir = "mapUS/", num = 6},
-		MapFR = {dir = "mapFR/", num = 8},
-		mapAlpine = {dir = "mapAlpine/", num = 4}	
+		-- as long as HautB. and Erlengrat not ready:
+		MapFR = {dir = "mapFR/", num = 8}, 					-- mapFR/
+		mapAlpine = {dir = "mapAlpine/", num = 4},			-- mapAlpine/
+		Waldstetten = {dir = "Waldstetten/", num = 8},	
 	}
 	-- Todo: adjust for other 2 maps
-	self.dePref = { 		-- German prepositions for US map triggers
-		TRANS01 = " der", 	-- Mühle
-		TRANS05 = " der", 	-- Weberei
-		TRANS08 = " der", 	-- Tankstelle
-		TRANS09 = " der", 	-- BGA
-		TRANS10 = " der", 	-- Bäckerei
-		TRANS11 = " der", 	-- Öl-Mühle
-		TRANS14 = "", 		-- Futter Süd
-		TRANS15 = " der" 	-- Meierei
+	self.dePref = { 		-- German prepositions for female (or no prep) names 
+		MapUS = {			--  for US map triggers
+			TRANS01 = " der", 	-- Mühle
+			TRANS05 = " der", 	-- Weberei
+			TRANS08 = " der", 	-- Tankstelle
+			TRANS09 = " der", 	-- BGA
+			TRANS10 = " der", 	-- Bäckerei
+			TRANS11 = " der", 	-- Öl-Mühle
+			TRANS14 = "", 		-- Futter Süd
+			TRANS15 = " der" 	-- Meierei
+		},
+		Waldstetten = {
+			TRANS06 = " der", 	-- bakery" 
+			TRANS07 = " der", 	-- gasstation
+			TRANS10 = " der", 	-- pizza" 		
+			TRANS12 = " der", 	-- pigfarm" 
+			TRANS13 = " der", 	-- refinery" 
+			TRANS15 = " der", 	-- restarea" 
+			TRANS16 = " der", 	-- raisinplant
+			TRANS20 = " der", 	-- liftstation
+			TRANS22 = " der", 	-- sugarmill"
+			TRANS27 = " der", 	-- spinnery" 
+			TRANS28 = " der", 	-- roadbuchen
+			TRANS29 = " der", 	-- bga" 		
+		}
 	}
 	self.triggers = {} 		-- save relation between placeable and trigger index
 	self.usedTriggers = {} 	-- keep index names of not yet created triggers 
 	self.numTriggers = 0  	-- # of loaded placeables with transport triggers
 	self.seenTriggers = 0 	-- # of already loaded placeables on client, after join game
 	self.LOADED_MY_PLACEABLES = 1001 	-- my own message id
+	self.draw = {} 			-- debug draw a trigger colli check cube
 
 	-- to save our self.placsLoaded switch: 
 	Utility.appendedFunction(PlaceableSystem, "saveToXML", placSaveXML)
@@ -64,6 +85,7 @@ function Trans:initialize()
 		Utility.appendedFunction(Placeable, "finalizePlacement", look)
 		Utility.overwrittenFunction(TransportMission, "collisionTestCallback", collisionTestCallback)
         addConsoleCommand("makeTransport", "[index] [(opt) object]- generate a transport mission with specified pickup trigger and (optional) object nr", "makeTransport", self)
+        addConsoleCommand("testEmpty", "[nodeId] - test for objects in overlapBox", "testEmpty", self)
         addConsoleCommand("testVis", "[index] - toggle visibility of placeable[index]", "testVis", self)
         addConsoleCommand("showTriggers", "list nonUpdateables by Class", "showTriggers", self)
     end
@@ -76,32 +98,43 @@ function Trans:onMissionInitialize(baseDirectory, missionCollaborators)
 	MissionManager.AI_PRICE_MULTIPLIER = 1.5
 	MissionManager.MISSION_GENERATION_INTERVAL = 3600000 -- every 1 game hour
 	TransportMission.REWARD_PER_METER = 1
+	TransportMission.TEST_HEIGHT = 3
 end
 function Trans:onPostLoadMap(mapNode, mapFile)
 	-- check for correct map
 	local map = g_currentMission.missionInfo.map
-	local mapDir = self.maps[map.id] and self.maps[map.id].dir
+	local mapId = map.id
+	if mapId:find("FS22_Waldstetten") then mapId = "Waldstetten" end
+	local mapDir = self.maps[mapId] and self.maps[mapId].dir
+	local shut = false 
 	debugPrint("[%s] mapId: %s, mapDir: %s, isMod: %s", self.name, map.id, mapDir, map.isModMap)
-	if not mapDir or map.isModMap then 
+	
+	if not mapDir then 
 		Logging.error("[%s] does not work for mod maps. Mod will shut down.", self.name)
 		g_gui:showInfoDialog({
 			text = string.format("%s does not work with this mod map. Please start a game with one of the standard maps.", self.name)
 		})
+		shut = true
+	else
+		self.mapDir = self.directory..mapDir
+		self.mapId = mapId
+		shut = not fileExists(Utils.getFilename("placeables.xml",self.mapDir))
+		if shut then 
+			local txt = string.format("%s does not work for %s yet. Mod will shut down.", 
+				self.name,mapId)
+			Logging.error(txt)
+			g_gui:showInfoDialog({text = txt})
+		end
+	end
+	if shut then
 		g_messageCenter:unsubscribeAll(self)
 		removeModEventListener(self.super)
 		return
 	end
-	self.mapDir = self.directory .. mapDir
-	-- as long as MapFR, mapAlpine not ready:
-	if mapDir ~= "mapUS/" then
-		Logging.error("[%s] %s not yet supported", self.name, map.id)
-		g_messageCenter:unsubscribeAll(self)
-		removeModEventListener(self.super)
-		return
-	end
+
 	-- adjust max missions
 	if g_server then
-		MissionManager.MAX_TRANSPORT_MISSIONS = self.maps[map.id].num 
+		MissionManager.MAX_TRANSPORT_MISSIONS = self.maps[mapId].num 
 		MissionManager.MAX_MISSIONS = MissionManager.MAX_MISSIONS + MissionManager.MAX_TRANSPORT_MISSIONS -- add max transport missions to max missions
 		MissionManager.MAX_MISSIONS_PER_GENERATION = math.min(MissionManager.MAX_MISSIONS / 5, 30) -- max missions per generation = max mission / 5 but not more then 30
 		MissionManager.MAX_TRIES_PER_GENERATION = math.ceil(MissionManager.MAX_MISSIONS_PER_GENERATION * 1.5) -- max tries per generation 50% more then max missions per generation
@@ -110,6 +143,21 @@ function Trans:onPostLoadMap(mapNode, mapFile)
 	debugPrint("[%s] MAX_TRANSPORT_MISSIONS set to %s", self.name, MissionManager.MAX_TRANSPORT_MISSIONS)
 	debugPrint("[%s] MAX_MISSIONS_PER_GENERATION set to %s", self.name, MissionManager.MAX_MISSIONS_PER_GENERATION)
 	debugPrint("[%s] MAX_TRIES_PER_GENERATION set to %s", self.name, MissionManager.MAX_TRIES_PER_GENERATION)
+end
+function Trans:onDraw()
+	-- draw debug cube, if trigger not empty
+	if not self.drawTrigger then return end
+
+	local rx, ry, rz = getWorldRotation(self.draw.triggerId)
+	local tx, ty, tz = getWorldTranslation(self.draw.triggerId)
+	local height = TransportMission.TEST_HEIGHT *0.5
+	ty = ty + height - 0.5
+	DebugUtil.drawDebugNode(self.draw.triggerId, "trigger", false, 1)
+	DebugUtil.drawOverlapBox(tx,ty,tz, rx,ry,rz, 1.5* (self.draw.sizeX +0.1), height,
+	 (self.draw.sizeZ +0.1))
+	for _,v in ipairs(self.draw.nodes) do
+		DebugUtil.drawDebugNode(v, tostring(v), false, 1)
+	end
 end
 function Trans:onWriteStream(streamId)
 	-- write to a client when it joins

@@ -5,7 +5,8 @@
 -- Author:      Mmtrx
 -- Changelog:
 --  v1.0.0.0    09.02.2022  initial 
---  		    14.03.2022  MP: transp mission / trigger handling ok. 
+--  (modHub)    14.03.2022  MP: transp mission / trigger handling ok. 
+--  v1.0.1.0 	28.04.2022  Waldstetten special
 --=======================================================================================================
 function fakeTrigger(tMission, index)
 	local trigger = g_missionManager.transportTriggers[index]
@@ -132,7 +133,7 @@ function TransportMission:getData()
 	local desc = self.missionConfig.description
 	if desc and desc:find("%s",1,true) then 
 		if g_languageShort == "de" then 
-			local pre = Trans.dePref[self.dropoff]
+			local pre = Trans.dePref[Trans.mapId][self.dropoff]
 			if pre == nil then pre = "m" end
 			desc = string.format(desc, pre, dropoff)
 		else
@@ -185,15 +186,16 @@ function TransportMission:loadObjects()
 	local offX, _, offZ = unpack(objectConfig.offset)
 	local rx, ry, rz = getWorldRotation(trigger.triggerId)
 	local tx, ty, tz = getWorldTranslation(trigger.triggerId)
-	--[[ somehow these dont show up ingame
-	DebugUtil.drawDebugNode(trigger.triggerId, "trigger", false, 1)
-	DebugUtil.drawOverlapBox(tx,ty,tz, rx,ry,rz, 3* (sizeX +0.1),
-	 TransportMission.TEST_HEIGHT *0.5, 2* (sizeZ +0.1))
-	]]
 	local rowOffset = sizeZ / 2 + 0.3
 	local xCellOffset = sizeX + 0.1
 	local rcos = math.cos(ry)
 	local rsin = math.sin(ry)
+	Trans.draw = {
+		triggerId = trigger.triggerId,
+		sizeX = sizeX,
+		sizeZ = sizeZ,
+		nodes = {}
+	}
 	-- move trigger origin back to center of warning stripes:
 	tx = tx + rsin*offZ + rcos*offX
 	tz = tz + rcos*offZ - rsin*offX 
@@ -202,6 +204,7 @@ function TransportMission:loadObjects()
 	debugPrint("   callin isTriggerEmpty with (%s, %s)", sizeX, sizeZ)
 	if not self:isTriggerEmpty(trigger, sizeX, sizeZ) then
 		Logging.warning("[%s] * Pickup Trigger is not Empty. Could not start mission",Trans.name)
+		Trans.drawTrigger = true
 		return false
 	end
 	Trans.currentM = self 
@@ -341,7 +344,8 @@ function TransportMissionTrigger.new(id, index, isClient)
 	self.isClient = Utils.getNoNil(isClient, false)
 	if index then
 		self.index = index 
-	else
+		g_currentMission:addNonUpdateable(self)
+	else 	-- we were called by TransportMissionTrigger:onCreate()
 		self.index = getUserAttribute(id, "index")
 	end
 	addTrigger(id, "triggerCallback", self)
@@ -349,7 +353,6 @@ function TransportMissionTrigger.new(id, index, isClient)
 
 	g_missionManager:addTransportMissionTrigger(self)
 	self:setMission(nil)
-	g_currentMission:addNonUpdateable(self)
 	return self
 end
 function TransportMissionTrigger:onMissionUpdated()

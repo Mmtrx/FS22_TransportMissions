@@ -20,8 +20,8 @@
 		<dropoffTrigger index="TRANS16" title="$l10n_silowest" /> 
 		<dropoffTrigger index="TRANS17" title="$l10n_heating" /> 
 
-		<object filename="$data/objects/pallets/bakeryBoxPallet/bakeryBoxPallet.xml" min="4" max="6" size="1.2 1 0.8" offset="0.8 0 5.5" title="$l10n_tc_bread" />
-		<object filename="$data/objects/pallets/cakePallet/cakePallet.xml" min="4" max="6" size="1.2 1 0.8" offset="0.8 0 5.5" title="$l10n_tc_cake" />
+		<object filename="$data/objects/pallets/bakeryBoxPallet/bakeryBoxPallet.xml" min="4" max="6" size="1.2 1 0.8" title="$l10n_tc_bread" />
+		<object filename="$data/objects/pallets/cakePallet/cakePallet.xml" min="4" max="6" size="1.2 1 0.8" title="$l10n_tc_cake" />
 	</mission>
 	<!-- grain mill: flour / sugar -->
 	<mission name="FLOUR" rewardScale="1.0" npcName="NPC_US_02" description="$l10n_tc_flourmission">
@@ -33,8 +33,8 @@
 		<dropoffTrigger index="TRANS10" title="$l10n_bakery" /> 
 		<dropoffTrigger index="TRANS12" title="$l10n_siloeast" /> 
 
-		<object filename="$data/objects/pallets/flourPallet/flourBoxPallet.xml" min="4" max="6" size="1.2 1 0.8" offset="0.8 0 5.5" title="$l10n_tc_flour" />
-		<object filename="$data/objects/pallets/sugarPallet/sugarBoxPallet.xml" min="4" max="6" size="1.2 1 1.5" offset="0.8 0 5.5" title="$l10n_tc_sugar" />
+		<object filename="$data/objects/pallets/flourPallet/flourBoxPallet.xml" min="4" max="6" size="1.2 1 0.8" title="$l10n_tc_flour" />
+		<object filename="$data/objects/pallets/sugarPallet/sugarBoxPallet.xml" min="4" max="6" size="1.2 1 1.5" title="$l10n_tc_sugar" />
 	</mission>
 	<!-- farmers market: produce -->
 	<mission name="PRODUCE" rewardScale="1.0" npcName="NPC_US_03" description="$l10n_tc_fmarketproduce">
@@ -43,11 +43,11 @@
 		<dropoffTrigger index="TRANS07" title="$l10n_mall" /> 
 		<dropoffTrigger index="TRANS08" title="$l10n_gasstation" /> 
 
-		<object filename="$data/objects/pallets/eggBoxPallet/eggBoxPallet.xml" min="4" max="6" size="1.2 1 0.8" offset="0.8 0 5.5" title="$l10n_tc_eggs" />
-		<object filename="$data/objects/pallets/honeyBoxPallet/honeyBoxPallet.xml" min="4" max="6" size="1.2 1 0.8" offset="0.8 0 5.5" title="$l10n_tc_honey" />
-		<object filename="$data/objects/pallets/lettuceBoxPallet/lettuceBoxPallet.xml" min="4" max="6" size="1.2 1 0.8" offset="0.8 0 5.5" title="$l10n_tc_lettuce" />
-		<object filename="$data/objects/pallets/strawberriesBoxPallet/strawberriesBoxPallet.xml" min="4" max="6" size="1.2 1 0.8" offset="0.8 0 5.5" title="$l10n_tc_strawberries" />
-		<object filename="$data/objects/pallets/tomatoesBoxPallet/tomatoesBoxPallet.xml" min="4" max="6" size="1.2 1 1.5" offset="0.8 0 5.5" title="$l10n_tc_tomatoes" />
+		<object filename="$data/objects/pallets/eggBoxPallet/eggBoxPallet.xml" min="4" max="6" size="1.2 1 0.8" title="$l10n_tc_eggs" />
+		<object filename="$data/objects/pallets/honeyBoxPallet/honeyBoxPallet.xml" min="4" max="6" size="1.2 1 0.8" title="$l10n_tc_honey" />
+		<object filename="$data/objects/pallets/lettuceBoxPallet/lettuceBoxPallet.xml" min="4" max="6" size="1.2 1 0.8" title="$l10n_tc_lettuce" />
+		<object filename="$data/objects/pallets/strawberriesBoxPallet/strawberriesBoxPallet.xml" min="4" max="6" size="1.2 1 0.8" title="$l10n_tc_strawberries" />
+		<object filename="$data/objects/pallets/tomatoesBoxPallet/tomatoesBoxPallet.xml" min="4" max="6" size="1.2 1 1.5" title="$l10n_tc_tomatoes" />
 	</mission>
 	<!-- farmers market: seeds, feed -->
 	<mission name="SEED" rewardScale="1.0" npcName="NPC_US_04" description="$l10n_tc_fmarketseed">
@@ -56,8 +56,8 @@
 		<dropoffTrigger index="TRANS14" title="$l10n_feedsouth" /> 
 		<dropoffTrigger index="TRANS16" title="$l10n_silowest" /> 
 
-		<object filename="$data/objects/pallets/pioneer/pioneerPallet.xml" min="4" max="6" size="1.8 1.8 0.8" offset="0.8 0 5.5" title="$l10n_tc_pioneer" />
-		<object filename="$data/objects/pallets/schaumann/schaumannPallet.xml" min="4" max="6" size="1.4 1.2 1.1" offset="0.8 0 5.5" title="$l10n_tc_schaumann" />
+		<object filename="$data/objects/pallets/pioneer/pioneerPallet.xml" min="4" max="6" size="1.8 1.8 0.8" title="$l10n_tc_pioneer" />
+		<object filename="$data/objects/pallets/schaumann/schaumannPallet.xml" min="4" max="6" size="1.4 1.2 1.1" title="$l10n_tc_schaumann" />
 	</mission>
 	<!-- sawmill: boards, furniture -->
 	<mission name="BOARDS" rewardScale="1.0" npcName="NPC_US_05" description="$l10n_tc_sawmill">
@@ -66,8 +66,8 @@
 		<dropoffTrigger index="TRANS12" title="$l10n_siloeast" /> 
 		<dropoffTrigger index="TRANS13" title="$l10n_carpenter" /> 
 
-		<object filename="$data/objects/pallets/boardsStackPallet/boardsStackPallet.xml" min="4" max="6" size="1 1.2 0.8" offset="0.8 0 5.5" title="$l10n_tc_boards" />
-		<object filename="$data/objects/pallets/furnitureStackPallet/furnitureStackPallet.xml" min="4" max="6" size="1.2 1 0.8" offset="0.8 0 5.5" title="$l10n_tc_furniture" />
+		<object filename="$data/objects/pallets/boardsStackPallet/boardsStackPallet.xml" min="4" max="6" size="1 1.2 0.8" title="$l10n_tc_boards" />
+		<object filename="$data/objects/pallets/furnitureStackPallet/furnitureStackPallet.xml" min="4" max="6" size="1.2 1 0.8" title="$l10n_tc_furniture" />
 	</mission>
 	<!-- cattle dealer: wool, liquid tank -->
 	<mission name="CATTLE" rewardScale="1.0" npcName="NPC_US_06" description="$l10n_tc_cattle">
@@ -77,8 +77,8 @@
 		<dropoffTrigger index="TRANS12" title="$l10n_siloeast" /> 
 		<dropoffTrigger index="TRANS13" title="$l10n_carpenter" /> 
 
-		<object filename="$data/objects/pallets/woolPallet/woolPallet.xml" min="4" max="6" size="1.8 1.5 2" offset="0.8 0 5.5" title="$l10n_tc_wool" />
-		<object filename="$data/objects/pallets/liquidTank/fertilizerTank.xml" min="4" max="6" size="1.8 2 2" offset="0.8 0 5.5" title="$l10n_tc_liquid" />
+		<object filename="$data/objects/pallets/woolPallet/woolPallet.xml" min="4" max="6" size="1.8 1.5 2" title="$l10n_tc_wool" />
+		<object filename="$data/objects/pallets/liquidTank/fertilizerTank.xml" min="4" max="6" size="1.8 2 2" title="$l10n_tc_liquid" />
 	</mission>
 	<!-- spinnery: fabrics, clothes -->
 	<mission name="FABRICS" rewardScale="1.0" npcName="NPC_US_07" description="$l10n_tc_spinnery">
@@ -87,8 +87,8 @@
 		<dropoffTrigger index="TRANS12" title="$l10n_siloeast" /> 
 		<dropoffTrigger index="TRANS16" title="$l10n_silowest" /> 
 
-		<object filename="$data/objects/pallets/fabricsPallet/fabricsPallet.xml" min="4" max="6" size="1.2 1 0.8" offset="0.8 0 5.5" title="$l10n_tc_fabrics" />
-		<object filename="$data/objects/pallets/clothesBoxPallet/clothesBoxPallet.xml" min="4" max="6" size="1.2 1 1" offset="0.8 0 5.5" title="$l10n_tc_clothes" />
+		<object filename="$data/objects/pallets/fabricsPallet/fabricsPallet.xml" min="4" max="6" size="1.2 1 0.8" title="$l10n_tc_fabrics" />
+		<object filename="$data/objects/pallets/clothesBoxPallet/clothesBoxPallet.xml" min="4" max="6" size="1.2 1 1" title="$l10n_tc_clothes" />
 	</mission>
 	<!-- mall: finished products -->
 	<mission name="MALL" rewardScale="1.0" npcName="NPC_US_08" description="$l10n_tc_mall">
@@ -99,16 +99,16 @@
 		<dropoffTrigger index="TRANS10" title="$l10n_bakery" /> 
 		<dropoffTrigger index="TRANS13" title="$l10n_carpenter" /> 
 
-		<object filename="$data/objects/pallets/clothesBoxPallet/clothesBoxPallet.xml" min="4" max="6" size="1.2 1 1" offset="0.8 0 5.5" title="$l10n_tc_clothes" />
-		<object filename="$data/objects/pallets/furnitureStackPallet/furnitureStackPallet.xml" min="4" max="6" size="1.2 1 0.8" offset="0.8 0 5.5" title="$l10n_tc_furniture" />
-		<object filename="$data/objects/pallets/flourPallet/flourBoxPallet.xml" min="4" max="6" size="1.2 1 0.8" offset="0.8 0 5.5" title="$l10n_tc_flour" />
-		<object filename="$data/objects/pallets/sugarPallet/sugarBoxPallet.xml" min="4" max="6" size="1.2 1 1.5" offset="0.8 0 5.5" title="$l10n_tc_sugar" />
-		<object filename="$data/objects/pallets/canolaOilPallet/canolaOilPallet.xml" min="4" max="6" size="1.2 1 1" offset="0.8 0 5.5" title="$l10n_tc_canola" />
-		<object filename="$data/objects/pallets/sunflowerOilPallet/sunflowerOilPallet.xml" min="4" max="6" size="1.2 1 1.5" offset="0.8 0 5.5" title="$l10n_tc_oil" />
-		<object filename="$data/objects/pallets/grapeJuicePallet/grapeJuicePallet.xml" min="4" max="6" size="1.2 1 0.8" offset="0.8 0 5.5" title="$l10n_tc_juice" />
-		<object filename="$data/objects/pallets/cerealsPallet/cerealsPallet.xml" min="4" max="6" size="1.4 1 1.5" offset="0.8 0 5.5" title="$l10n_tc_cereals" />
-		<object filename="$data/objects/pallets/cheesePallet/cheesePallet.xml" min="4" max="6" size="1.2 1 1.5" offset="0.8 0 5.5" title="$l10n_tc_cheese" />
-		<object filename="$data/objects/pallets/chocolateBoxPallet/chocolateBoxPallet.xml" min="4" max="6" size="1.3 1 1.1" offset="0.8 0 5.5" title="$l10n_tc_choco" />
+		<object filename="$data/objects/pallets/clothesBoxPallet/clothesBoxPallet.xml" min="4" max="6" size="1.2 1 1" title="$l10n_tc_clothes" />
+		<object filename="$data/objects/pallets/furnitureStackPallet/furnitureStackPallet.xml" min="4" max="6" size="1.2 1 0.8" title="$l10n_tc_furniture" />
+		<object filename="$data/objects/pallets/flourPallet/flourBoxPallet.xml" min="4" max="6" size="1.2 1 0.8" title="$l10n_tc_flour" />
+		<object filename="$data/objects/pallets/sugarPallet/sugarBoxPallet.xml" min="4" max="6" size="1.2 1 1.5" title="$l10n_tc_sugar" />
+		<object filename="$data/objects/pallets/canolaOilPallet/canolaOilPallet.xml" min="4" max="6" size="1.2 1 1" title="$l10n_tc_canola" />
+		<object filename="$data/objects/pallets/sunflowerOilPallet/sunflowerOilPallet.xml" min="4" max="6" size="1.2 1 1.5" title="$l10n_tc_oil" />
+		<object filename="$data/objects/pallets/grapeJuicePallet/grapeJuicePallet.xml" min="4" max="6" size="1.2 1 0.8" title="$l10n_tc_juice" />
+		<object filename="$data/objects/pallets/cerealsPallet/cerealsPallet.xml" min="4" max="6" size="1.4 1 1.5" title="$l10n_tc_cereals" />
+		<object filename="$data/objects/pallets/cheesePallet/cheesePallet.xml" min="4" max="6" size="1.2 1 1.5" title="$l10n_tc_cheese" />
+		<object filename="$data/objects/pallets/chocolateBoxPallet/chocolateBoxPallet.xml" min="4" max="6" size="1.3 1 1.1" title="$l10n_tc_choco" />
 	</mission>
 	<!-- gas station: empty containers -->
 	<mission name="CONTAINER" rewardScale="1.0" npcName="NPC_US_10" description="$l10n_tc_container">
@@ -123,9 +123,9 @@
 		<dropoffTrigger index="TRANS15" title="$l10n_dairy" /> 
 		<dropoffTrigger index="TRANS17" title="$l10n_heating" /> 
 
-		<object filename="$data/objects/pallets/liquidTank/fertilizerTank.xml" min="4" max="6" size="1.7 1.8 2" offset="0.8 0 5.5" title="$l10n_tc_liquid" />
-		<object filename="$data/objects/pallets/fillablePallet/fillablePallet.xml" min="4" max="6" size="1.2 1.2 1.1" offset="0.8 0 5.5" title="$l10n_tc_fillable" />
-		<object filename="$data/objects/pallets/grapePallet/grapePallet.xml" min="4" max="6" size="1.2 1.2 1.1" offset="0.8 0 5.5" title="$l10n_tc_grape" />
+		<object filename="$data/objects/pallets/liquidTank/fertilizerTank.xml" min="4" max="6" size="1.7 1.8 2" title="$l10n_tc_liquid" />
+		<object filename="$data/objects/pallets/fillablePallet/fillablePallet.xml" min="4" max="6" size="1.2 1.2 1.1" title="$l10n_tc_fillable" />
+		<object filename="$data/objects/pallets/grapePallet/grapePallet.xml" min="4" max="6" size="1.2 1.2 1.1" title="$l10n_tc_grape" />
 	</mission>
 	<!-- gas station: bread butter choc -->
 	<mission name="GAS" rewardScale="1.0" npcName="NPC_US_09" description="$l10n_tc_gasbread">
@@ -137,9 +137,9 @@
 		<dropoffTrigger index="TRANS09" title="$l10n_bga" /> 
 		<dropoffTrigger index="TRANS13" title="$l10n_carpenter" /> 
 
-		<object filename="$data/objects/pallets/bakeryBoxPallet/bakeryBoxPallet.xml" min="4" max="6" size="1.2 1 0.8" offset="0.8 0 5.5" title="$l10n_tc_bread" />
-		<object filename="$data/objects/pallets/butterBoxPallet/butterBoxPallet.xml" min="4" max="6" size="1.2 1 1.1" offset="0.8 0 5.5" title="$l10n_tc_butter" />
-		<object filename="$data/objects/pallets/chocolateBoxPallet/chocolateBoxPallet.xml" min="4" max="6" size="1.2 1 1.1" offset="0.8 0 5.5" title="$l10n_tc_choco" />
+		<object filename="$data/objects/pallets/bakeryBoxPallet/bakeryBoxPallet.xml" min="4" max="6" size="1.2 1 0.8" title="$l10n_tc_bread" />
+		<object filename="$data/objects/pallets/butterBoxPallet/butterBoxPallet.xml" min="4" max="6" size="1.2 1 1.1" title="$l10n_tc_butter" />
+		<object filename="$data/objects/pallets/chocolateBoxPallet/chocolateBoxPallet.xml" min="4" max="6" size="1.2 1 1.1" title="$l10n_tc_choco" />
 	</mission>
 	<!-- BGA: liquid pioneer -->
 	<mission name="BGA" rewardScale="1.0" npcName="NPC_US_11" description="$l10n_tc_bga">
@@ -148,8 +148,8 @@
 		<dropoffTrigger index="TRANS04" title="$l10n_cattle" />
 		<dropoffTrigger index="TRANS14" title="$l10n_feedsouth" /> 
 
-		<object filename="$data/objects/pallets/liquidTank/fertilizerTank.xml" min="4" max="6" size="1.8 2 2" offset="0.8 0 5.5" title="$l10n_tc_liquid" />
-		<object filename="$data/objects/pallets/pioneer/pioneerPallet.xml" min="4" max="6" size="1.8 1.8 0.8" offset="0.8 0 5.5" title="$l10n_tc_pioneer" />
+		<object filename="$data/objects/pallets/liquidTank/fertilizerTank.xml" min="4" max="6" size="1.8 2 2" title="$l10n_tc_liquid" />
+		<object filename="$data/objects/pallets/pioneer/pioneerPallet.xml" min="4" max="6" size="1.8 1.8 0.8" title="$l10n_tc_pioneer" />
 	</mission>
 	<!-- oil plant: liquid, canola, sunflower oil -->
 	<mission name="OIL" rewardScale="1.0" npcName="NPC_US_12" description="$l10n_tc_oilplant">
@@ -159,9 +159,9 @@
 		<dropoffTrigger index="TRANS08" title="$l10n_gasstation" /> 
 		<dropoffTrigger index="TRANS10" title="$l10n_bakery" /> 
 
-		<object filename="$data/objects/pallets/liquidTank/fertilizerTank.xml" min="4" max="6" size="1.8 2 2" offset="0.8 0 5.5" title="$l10n_tc_liquid" />
-		<object filename="$data/objects/pallets/canolaOilPallet/canolaOilPallet.xml" min="4" max="6" size="1.2 1 1" offset="0.8 0 5.5" title="$l10n_tc_canola" />
-		<object filename="$data/objects/pallets/sunflowerOilPallet/sunflowerOilPallet.xml" min="4" max="6" size="1.2 1 1.5" offset="0.8 0 5.5" title="$l10n_tc_oil" />
+		<object filename="$data/objects/pallets/liquidTank/fertilizerTank.xml" min="4" max="6" size="1.8 2 2" title="$l10n_tc_liquid" />
+		<object filename="$data/objects/pallets/canolaOilPallet/canolaOilPallet.xml" min="4" max="6" size="1.2 1 1" title="$l10n_tc_canola" />
+		<object filename="$data/objects/pallets/sunflowerOilPallet/sunflowerOilPallet.xml" min="4" max="6" size="1.2 1 1.5" title="$l10n_tc_oil" />
 	</mission>
 	<!-- rail silo: endproducts -->
 	<mission name="RAIL" rewardScale="1.0" npcName="NPC_US_13" description="$l10n_tc_rail">
@@ -172,14 +172,14 @@
 		<dropoffTrigger index="TRANS12" title="$l10n_siloeast" />
 		<dropoffTrigger index="TRANS16" title="$l10n_silowest" /> 
 
-		<object filename="$data/objects/pallets/canolaOilPallet/canolaOilPallet.xml" min="4" max="6" size="1.2 1 1" offset="0.8 0 5.5" title="$l10n_tc_canola" />
-		<object filename="$data/objects/pallets/clothesBoxPallet/clothesBoxPallet.xml" min="4" max="6" size="1.2 1 1" offset="0.8 0 5.5" title="$l10n_tc_clothes" />
-		<object filename="$data/objects/pallets/furnitureStackPallet/furnitureStackPallet.xml" min="4" max="6" size="1.2 1 0.8" offset="0.8 0 5.5" title="$l10n_tc_furniture" />
-		<object filename="$data/objects/pallets/flourPallet/flourBoxPallet.xml" min="4" max="6" size="1.2 1 0.8" offset="0.8 0 5.5" title="$l10n_tc_flour" />
-		<object filename="$data/objects/pallets/sugarPallet/sugarBoxPallet.xml" min="4" max="6" size="1.2 1 1.5" offset="0.8 0 5.5" title="$l10n_tc_sugar" />
-		<object filename="$data/objects/pallets/grapeJuicePallet/grapeJuicePallet.xml" min="4" max="6" size="1.2 1 0.8" offset="0.8 0 5.5" title="$l10n_tc_juice" />
-		<object filename="$data/objects/pallets/cerealsPallet/cerealsPallet.xml" min="4" max="6" size="1.4 1 1.5" offset="0.8 0 5.5" title="$l10n_tc_cereals" />
-		<object filename="$data/objects/pallets/chocolateBoxPallet/chocolateBoxPallet.xml" min="4" max="6" size="1.3 1 1.1" offset="0.8 0 5.5" title="$l10n_tc_choco" />
+		<object filename="$data/objects/pallets/canolaOilPallet/canolaOilPallet.xml" min="4" max="6" size="1.2 1 1" title="$l10n_tc_canola" />
+		<object filename="$data/objects/pallets/clothesBoxPallet/clothesBoxPallet.xml" min="4" max="6" size="1.2 1 1" title="$l10n_tc_clothes" />
+		<object filename="$data/objects/pallets/furnitureStackPallet/furnitureStackPallet.xml" min="4" max="6" size="1.2 1 0.8" title="$l10n_tc_furniture" />
+		<object filename="$data/objects/pallets/flourPallet/flourBoxPallet.xml" min="4" max="6" size="1.2 1 0.8" title="$l10n_tc_flour" />
+		<object filename="$data/objects/pallets/sugarPallet/sugarBoxPallet.xml" min="4" max="6" size="1.2 1 1.5" title="$l10n_tc_sugar" />
+		<object filename="$data/objects/pallets/grapeJuicePallet/grapeJuicePallet.xml" min="4" max="6" size="1.2 1 0.8" title="$l10n_tc_juice" />
+		<object filename="$data/objects/pallets/cerealsPallet/cerealsPallet.xml" min="4" max="6" size="1.4 1 1.5" title="$l10n_tc_cereals" />
+		<object filename="$data/objects/pallets/chocolateBoxPallet/chocolateBoxPallet.xml" min="4" max="6" size="1.3 1 1.1" title="$l10n_tc_choco" />
 	</mission>
 	<!-- carpenter: liquid, boards, furniture -->
 	<mission name="CARPENTER" rewardScale="1.0" npcName="NPC_US_14" description="$l10n_tc_carpenter">
@@ -189,9 +189,9 @@
 		<dropoffTrigger index="TRANS12" title="$l10n_siloeast" />
 		<dropoffTrigger index="TRANS16" title="$l10n_silowest" /> 
 
-		<object filename="$data/objects/pallets/liquidTank/fertilizerTank.xml" min="4" max="6" size="1.8 2 2" offset="0.8 0 5.5" title="$l10n_tc_liquid" />
-		<object filename="$data/objects/pallets/furnitureStackPallet/furnitureStackPallet.xml" min="4" max="6" size="1.2 1 0.8" offset="0.8 0 5.5" title="$l10n_tc_furniture" />
-		<object filename="$data/objects/pallets/boardsStackPallet/boardsStackPallet.xml" min="4" max="6" size="1 1.2 0.8" offset="0.8 0 5.5" title="$l10n_tc_boards" />
+		<object filename="$data/objects/pallets/liquidTank/fertilizerTank.xml" min="4" max="6" size="1.8 2 2" title="$l10n_tc_liquid" />
+		<object filename="$data/objects/pallets/furnitureStackPallet/furnitureStackPallet.xml" min="4" max="6" size="1.2 1 0.8" title="$l10n_tc_furniture" />
+		<object filename="$data/objects/pallets/boardsStackPallet/boardsStackPallet.xml" min="4" max="6" size="1 1.2 0.8" title="$l10n_tc_boards" />
 	</mission>
 	<!-- Feed south: liquid, pioneer, schaumann -->
 	<mission name="FEED" rewardScale="1.0" npcName="NPC_US_15" description="$l10n_tc_feed">
@@ -200,9 +200,9 @@
 		<dropoffTrigger index="TRANS04" title="$l10n_cattle" />
 		<dropoffTrigger index="TRANS16" title="$l10n_silowest" /> 
 
-		<object filename="$data/objects/pallets/liquidTank/fertilizerTank.xml" min="4" max="6" size="1.8 2 2" offset="0.8 0 5.5" title="$l10n_tc_liquid" />
-		<object filename="$data/objects/pallets/pioneer/pioneerPallet.xml" min="4" max="6" size="1.8 1.8 0.8" offset="0.8 0 5.5" title="$l10n_tc_pioneer" />
-		<object filename="$data/objects/pallets/schaumann/schaumannPallet.xml" min="4" max="6" size="1.4 1.2 1.1" offset="0.8 0 5.5" title="$l10n_tc_schaumann" />
+		<object filename="$data/objects/pallets/liquidTank/fertilizerTank.xml" min="4" max="6" size="1.8 2 2" title="$l10n_tc_liquid" />
+		<object filename="$data/objects/pallets/pioneer/pioneerPallet.xml" min="4" max="6" size="1.8 1.8 0.8" title="$l10n_tc_pioneer" />
+		<object filename="$data/objects/pallets/schaumann/schaumannPallet.xml" min="4" max="6" size="1.4 1.2 1.1" title="$l10n_tc_schaumann" />
 	</mission>
 	<!-- dairy: butter, cheese, sugar -->
 	<mission name="DAIRY" rewardScale="1.0" npcName="NPC_US_02" description="$l10n_tc_dairy">
@@ -212,9 +212,9 @@
 		<dropoffTrigger index="TRANS08" title="$l10n_gasstation" /> 
 		<dropoffTrigger index="TRANS10" title="$l10n_bakery" /> 
 
-		<object filename="$data/objects/pallets/butterBoxPallet/butterBoxPallet.xml" min="4" max="6" size="1.2 1 1.1" offset="0.8 0 5.5" title="$l10n_tc_butter" />
-		<object filename="$data/objects/pallets/cheesePallet/cheesePallet.xml" min="4" max="6" size="1.2 1 1.5" offset="0.8 0 5.5" title="$l10n_tc_cheese" />
-		<object filename="$data/objects/pallets/sugarPallet/sugarBoxPallet.xml" min="4" max="6" size="1.2 1 1.5" offset="0.8 0 5.5" title="$l10n_tc_sugar" />
+		<object filename="$data/objects/pallets/butterBoxPallet/butterBoxPallet.xml" min="4" max="6" size="1.2 1 1.1" title="$l10n_tc_butter" />
+		<object filename="$data/objects/pallets/cheesePallet/cheesePallet.xml" min="4" max="6" size="1.2 1 1.5" title="$l10n_tc_cheese" />
+		<object filename="$data/objects/pallets/sugarPallet/sugarBoxPallet.xml" min="4" max="6" size="1.2 1 1.5" title="$l10n_tc_sugar" />
 	</mission>
 	<!-- heating plant: empty containers -->
 	<mission name="CONTAINER_H" rewardScale="1.0" npcName="NPC_US_10" description="$l10n_tc_container">
@@ -229,8 +229,8 @@
 		<dropoffTrigger index="TRANS14" title="$l10n_feedsouth" /> 
 		<dropoffTrigger index="TRANS15" title="$l10n_dairy" /> 
 
-		<object filename="$data/objects/pallets/fillablePallet/fillablePallet.xml" min="4" max="6" size="1.2 1.2 1.1" offset="0.8 0 5.5" title="$l10n_tc_fillable" />
-		<object filename="$data/objects/pallets/grapePallet/grapePallet.xml" min="4" max="6" size="1.2 1.2 1.1" offset="0.8 0 5.5" title="$l10n_tc_grape" />
+		<object filename="$data/objects/pallets/fillablePallet/fillablePallet.xml" min="4" max="6" size="1.2 1.2 1.1" title="$l10n_tc_fillable" />
+		<object filename="$data/objects/pallets/grapePallet/grapePallet.xml" min="4" max="6" size="1.2 1.2 1.1" title="$l10n_tc_grape" />
 	</mission>
 
 </transportMissions>

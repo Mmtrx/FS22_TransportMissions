@@ -5,6 +5,7 @@
 -- Author:      Mmtrx
 -- Changelog:
 --  v1.0.0.0    09.02.2022  initial 
+--  v1.0.1.0 	28.04.2022  Waldstetten special
 --======================================================================================
 function debugPrint(text, ...)
 	if Trans.debug then
@@ -93,13 +94,51 @@ function Trans:makeTransport(index, iobj)
 	g_messageCenter:publish(MessageType.MISSION_GENERATED)
 	return "** mission generated **"
 end
+function Trans:testEmpty(id)
+	-- call overlapBox() with std trigger sizes around node id
+	local rx, ry, rz = getWorldRotation(tonumber(id))
+	local tx, ty, tz = getWorldTranslation(tonumber(id))
+	local height = TransportMission.TEST_HEIGHT *0.5
+	ty = ty + height - 0.5
+
+	self.tempHasCollision = false
+	local nc = overlapBox(tx, ty, tz, rx, ry, rz, 1.5 * (1.7 + 0.1), height, 
+		1 * (2 + 0.1), "collision", self, 537087)
+	if self.tempHasCollision then 
+		return string.format("triggerbox has %d collisions", nc)
+	else
+		return "clear"
+	end
+end
+function Trans:collision(transformId)
+	if g_currentMission.nodeToObject[transformId] ~= nil or g_currentMission.players[transformId] ~= nil or g_currentMission:getNodeObject(transformId) ~= nil then
+		self.tempHasCollision = true
+		debugPrint("      nodeToObject[%d] = %s. players[] = %s. i3dFile = %s",
+		transformId, 
+		g_currentMission.nodeToObject[transformId], g_currentMission.players[transformId],
+		g_currentMission:getNodeObject(transformId).i3dFilename:sub(-20))
+		table.insert(Trans.draw.nodes, transformId)
+	end
+end
+function TransportMission:isTriggerEmpty(trigger, objectSizeX, objectSizeZ)
+	local rx, ry, rz = getWorldRotation(trigger.triggerId)
+	local tx, ty, tz = getWorldTranslation(trigger.triggerId)
+	local height = TransportMission.TEST_HEIGHT *0.5
+	ty = ty + height - 0.5
+
+	self.tempHasCollision = false
+	overlapBox(tx, ty, tz, rx, ry, rz, 1.5 * (objectSizeX + 0.1), height, 
+		1 * (objectSizeZ + 0.1), "collisionTestCallback", self, 537087)
+	return not self.tempHasCollision
+end
 function collisionTestCallback(self,superf, transformId)
 	if self.mission.nodeToObject[transformId] ~= nil or self.mission.players[transformId] ~= nil or self.mission:getNodeObject(transformId) ~= nil then
 		self.tempHasCollision = true
-		debugPrint("      nodeToObject[%d] = %s. players[] = %s. :getNodeObject() = %s",
+		debugPrint("      nodeToObject[%d] = %s. players[] = %s. i3dFile = %s",
 		transformId, 
 		self.mission.nodeToObject[transformId], self.mission.players[transformId],
-		self.mission:getNodeObject(transformId))
+		self.mission:getNodeObject(transformId).i3dFilename:sub(-20))
+		table.insert(Trans.draw.nodes, transformId)
 	end
 end
 function createObject( self, superf, x, y, z, rx, ry, rz )
@@ -111,6 +150,7 @@ function createObject( self, superf, x, y, z, rx, ry, rz )
 end
 function look(self)
 	if g_currentMission.isMissionStarted then
-		print(string.format("** %s %s loaded. id: %s",self.typeName, self.i3dFilename:sub(-15), self.id ))
+		print(string.format("** %s %s loaded. id/ node: %d/ %d",self.typeName, 
+			self.i3dFilename:sub(-15), self.id, self.rootNode ))
 	end
 end

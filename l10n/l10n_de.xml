@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
 <l10n>
 	<texts>
-		<!-- Mission descriptions -->
+		<!-- Mission descriptions Elmcreek -->
 		<text name="tc_bakery" text="Fahre ein paar Backwaren für die Bäckerei aus. Liefere die Paletten bei%s %s ab." />
 		<text name="tc_flourmission" text="Auftrag von der Mühle: Hole ein paar Paletten ab und liefere sie bei%s %s aus." />
 		<text name="tc_fmarketproduce" text="Fahre für den Farmer-Markt ein paar Lebensmittel zum Kunden. Liefere die Paletten bei%s %s ab." />
@@ -18,25 +18,57 @@
 		<text name="tc_carpenter" text="Der Tischler möchte ein paar Paletten vom Hof haben, liefere sie bei%s %s ab." />
 		<text name="tc_feed" text="Auftrag von Futtermittel Süd: Lade die Paletten bei ihnen auf und liefere sie bei%s %s ab." />
 		<text name="tc_dairy" text="Die Meierei hat angerufen: Liefere ein paar Produkte von ihnen bei%s %s ab." />
+		<!-- Mission descriptions Waldstetten -->
+		<text name="tc_shop" text="Auftrag vom Fahrzeughändler. Zu%s %s sollen ein paar Paletten geliefert werden." />
+		<text name="tc_farms" text="Der Hof hat angerufen: Lade dort ein paar Paletten auf und liefere sie bei%s %s ab." />
+		<text name="tc_hotel" text="Der Laden hat such gemeldet: Lade ein paar Güter auf und liefere die Paletten bei%s %s ab." />
+		<text name="tc_grainsilo" text="Auftrag vom Getreidespeicher. Zu%s %s sollen ein paar Paletten geliefert werden." />
+		<text name="tc_sugarmill" text="Die Zuckerfabrik hätte ein paar Paletten zu%s %s zu transportieren." />
+		<text name="tc_tailor" text="Auftrag von der Schneiderei Oberwalden. Zu%s %s sollen ein paar Kartons Kleidung geliefert werden." />
+		<text name="tc_buchen" text="Die Spedition aus Buchen hat ein paar Paletten an der Landstraße abgestellt. Bitte liefere sie weiter zu%s %s." />
+		<text name="tc_oilind" text="Das Presswerk Oberwalden hat folgenden Auftrag: Produkte dort abholen und bei%s %s abliefern." />
 
-		<!-- Transport Trigger -->
-		<text name="grainmill" 	text="Getreidemühle" />
-		<text name="farmers"  	text="Farmers Market" />
-		<text name="sawmill"  	text="Sägewerk" />
-		<text name="cattle"  	text="Viehhändler" />
-		<text name="spinnery"  	text="Weberei" />
-		<text name="bowling"  	text="Bowling Restaurant" />
-		<text name="mall"  		text="Einkaufszentrum" />
-		<text name="gasstation" text="Tankstelle" />
-		<text name="bga"  		text="BGA" />
+		<!-- Transport Trigger standard -->
 		<text name="bakery"  	text="Bäckerei" />
-		<text name="oilplant" 	text="Ölmühle" />
-		<text name="siloeast"  	text="Bahnsilo Ost" />
+		<text name="bga"  		text="BGA" />
+		<text name="bowling"  	text="Bowling Restaurant" />
 		<text name="carpenter" 	text="Schreiner" />
-		<text name="feedsouth" 	text="Futtermittel Süd" />
+		<text name="cattle"  	text="Viehhändler" />
 		<text name="dairy" 		text="Meierei" />
-		<text name="silowest"  	text="Bahnsilo West" />
+		<text name="farmers"  	text="Farmers Market" />
+		<text name="feedsouth" 	text="Futtermittel Süd" />
+		<text name="gasstation" text="Tankstelle" />
+		<text name="grainmill" 	text="Getreidemühle" />
 		<text name="heating" 	text="Bioheizkraftwerk" />
+		<text name="mall"  		text="Einkaufszentrum" />
+		<text name="oilplant" 	text="Ölmühle" />
+		<text name="raisinplant"text="Traubenverarbeitung" />
+		<text name="sawmill"  	text="Sägewerk" />
+		<text name="shop" 		text="Fahrzeughändler" />
+		<text name="siloeast"  	text="Bahnsilo Ost" />
+		<text name="silowest"  	text="Bahnsilo West" />
+		<text name="spinnery"  	text="Weberei" />
+		<text name="sugarmill" 	text="Zuckerfabrik" />
+		<text name="tailor" 	text="Schneider" />
+
+		<!-- Transport Trigger Waldstetten-->
+		<text name="communal"   text="Bauhof" />
+		<text name="hotel" 		text="Stadthotel" />
+		<text name="fuchs01" 	text="FuchsShop Waldstetten" />
+		<text name="fuchs02" 	text="FuchsShop Oberwalden" />
+		<text name="pizza" 		text="Pizzeria" />
+		<text name="grainsilo"  text="Getreidespeicher" />
+		<text name="pigfarm" 	text="Schweinefarm" />
+		<text name="refinery" 	text="Raffinerie" />
+		<text name="reingrub" 	text="Milchhof Reingrub" />
+		<text name="restarea" 	text="Raststätte" />
+		<text name="startfarm" 	text="Hof Kolmleiten" />
+		<text name="quarry" 	text="Steinbruch" />
+		<text name="liftstation" text="Talstation" />
+		<text name="trainstation" text="Bahnhof" />
+		<text name="industry" 	text="Atomkraftwerk" />
+		<text name="roadbuchen" text="Straße nach Buchen" />
+		<text name="contractor" text="Lohnunternehmer" />
 
 		<!-- Object descriptions -->
 		<text name="tc_boards" 	text="Bretter" />
@@ -68,3 +100,51 @@
 		<text name="tc_wool" 	text="Wolle" />
 	</texts>
 </l10n>
+<!--
+	industrial:
+		<object filename="$data/objects/pallets/liquidTank/fertilizerTank.xml" min="4" max="6" size="1.7 1.8 2" title="$l10n_tc_liquid" />
+		<object filename="$data/objects/pallets/fillablePallet/fillablePallet.xml" min="4" max="6" size="1.2 1.2 1.1" title="$l10n_tc_fillable" />
+		<object filename="$data/objects/pallets/grapePallet/grapePallet.xml" min="4" max="6" size="1.2 1.2 1.1" title="$l10n_tc_grape" />
+		<object filename="$data/objects/pallets/boardsStackPallet/boardsStackPallet.xml" min="4" max="6" size="1 1.2 0.8" title="$l10n_tc_boards" />
+		<text name="tc_boards" 	text="Bretter" />
+		<text name="tc_fillable" text="Behälter" />
+		<text name="tc_grape" 	text="Behälter" />
+		<text name="tc_liquid" 	text="Tankbehälter" />
+
+	breakfast:	
+		tc_bread tc_butter tc_cake tc_cereals tc_cheese	tc_choco tc_juice tc_sugar
+		<object filename="$data/objects/pallets/bakeryBoxPallet/bakeryBoxPallet.xml" min="4" max="6" size="1.2 1 0.8" title="$l10n_tc_bread" />
+		<object filename="$data/objects/pallets/butterBoxPallet/butterBoxPallet.xml" min="4" max="6" size="1.2 1 1.1" title="$l10n_tc_butter" />
+		<object filename="$data/objects/pallets/cakePallet/cakePallet.xml" min="4" max="6" size="1.2 1 0.8" title="$l10n_tc_cake" />
+		<object filename="$data/objects/pallets/cheesePallet/cheesePallet.xml" min="4" max="6" size="1.2 1 1.5" title="$l10n_tc_cheese" />
+		<object filename="$data/objects/pallets/sugarPallet/sugarBoxPallet.xml" min="4" max="6" size="1.2 1 1.5" title="$l10n_tc_sugar" />
+		<object filename="$data/objects/pallets/grapeJuicePallet/grapeJuicePallet.xml" min="4" max="6" size="1.2 1 0.8" title="$l10n_tc_juice" />
+		<object filename="$data/objects/pallets/cerealsPallet/cerealsPallet.xml" min="4" max="6" size="1.4 1 1.5" title="$l10n_tc_cereals" />
+		<object filename="$data/objects/pallets/chocolateBoxPallet/chocolateBoxPallet.xml" min="4" max="6" size="1.3 1 1.1" title="$l10n_tc_choco" />
+
+	produce:
+		tc_eggs tc_honey tc_lettuce tc_strawberries tc_tomatoes
+		<object filename="$data/objects/pallets/eggBoxPallet/eggBoxPallet.xml" min="4" max="6" size="1.2 1 0.8" title="$l10n_tc_eggs" />
+		<object filename="$data/objects/pallets/honeyBoxPallet/honeyBoxPallet.xml" min="4" max="6" size="1.2 1 0.8" title="$l10n_tc_honey" />
+		<object filename="$data/objects/pallets/lettuceBoxPallet/lettuceBoxPallet.xml" min="4" max="6" size="1.2 1 0.8" title="$l10n_tc_lettuce" />
+		<object filename="$data/objects/pallets/strawberriesBoxPallet/strawberriesBoxPallet.xml" min="4" max="6" size="1.2 1 0.8" title="$l10n_tc_strawberries" />
+		<object filename="$data/objects/pallets/tomatoesBoxPallet/tomatoesBoxPallet.xml" min="4" max="6" size="1.2 1 1.5" title="$l10n_tc_tomatoes" />
+
+	products:	
+		tc_clothes tc_furniture
+		<object filename="$data/objects/pallets/clothesBoxPallet/clothesBoxPallet.xml" min="4" max="6" size="1.2 1 1" title="$l10n_tc_clothes" />
+		<object filename="$data/objects/pallets/furnitureStackPallet/furnitureStackPallet.xml" min="4" max="6" size="1.2 1 0.8" title="$l10n_tc_furniture" />
+
+	half-product:
+		tc_canola tc_fabrics tc_flour tc_oil tc_wool
+		<object filename="$data/objects/pallets/canolaOilPallet/canolaOilPallet.xml" min="4" max="6" size="1.2 1 1" title="$l10n_tc_canola" />
+		<object filename="$data/objects/pallets/fabricsPallet/fabricsPallet.xml" min="4" max="6" size="1.2 1 0.8" title="$l10n_tc_fabrics" />
+		<object filename="$data/objects/pallets/flourPallet/flourBoxPallet.xml" min="4" max="6" size="1.2 1 0.8" title="$l10n_tc_flour" />
+		<object filename="$data/objects/pallets/sunflowerOilPallet/sunflowerOilPallet.xml" min="4" max="6" size="1.2 1 1.5" title="$l10n_tc_oil" />
+		<object filename="$data/objects/pallets/woolPallet/woolPallet.xml" min="4" max="6" size="1.8 1.5 2" title="$l10n_tc_wool" />
+
+	farm supplies:
+		tc_pioneer tc_schaumann
+		<object filename="$data/objects/pallets/pioneer/pioneerPallet.xml" min="4" max="6" size="1.8 1.8 0.8" title="$l10n_tc_pioneer" />
+		<object filename="$data/objects/pallets/schaumann/schaumannPallet.xml" min="4" max="6" size="1.4 1.2 1.1" title="$l10n_tc_schaumann" />
+-->

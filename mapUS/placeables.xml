@@ -19,7 +19,7 @@
     <!-- 09 BGA -->
     <placeable modName="FS22_TransportMissions" filename="$moddir$FS22_TransportMissions/triggers/trigger01.xml" id="56" position="1020 85.373550415039 -100" rotation="0 0 0" age="0.000000" price="10.000000" farmId="15"/>
     <!-- 10 bakery -->
-    <placeable modName="FS22_TransportMissions" filename="$moddir$FS22_TransportMissions/triggers/trigger01.xml" id="57" position="639.24761962891 85.622573852539 102.2" rotation="0 0 0" age="0.000000" price="10.000000" farmId="15"/>
+    <placeable modName="FS22_TransportMissions" filename="$moddir$FS22_TransportMissions/triggers/trigger01.xml" id="57" position="639.24761962891 85.622573852539 102.2" rotation="0 90 0" age="0.000000" price="10.000000" farmId="15"/>
     
     <!-- 11 oil plant -->
     <placeable modName="FS22_TransportMissions" filename="$moddir$FS22_TransportMissions/triggers/trigger01.xml" id="58" position="990.10974121094 88.12451171875 199.34344482422" rotation="0 0 0" age="0.000000" price="10.000000" farmId="15"/>
